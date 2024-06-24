@@ -5,6 +5,7 @@ import argparse
 import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer
+from InstructorEmbedding import INSTRUCTOR
 from sklearn.metrics.pairwise import pairwise_distances
 from sklearn.metrics import silhouette_score, calinski_harabasz_score
 from sklearn.cluster import AgglomerativeClustering
@@ -16,8 +17,8 @@ def restricted_float(x):
     except ValueError:
         raise argparse.ArgumentTypeError("%r not a floating-point literal" % (x,))
 
-    if x < 0.05 or x > 0.15:
-        raise argparse.ArgumentTypeError("%r not in range [0.15, 0.05]"%(x,))
+    if x < 0.01 or x > 0.2:
+        raise argparse.ArgumentTypeError("%r not in range [0.05, 0.2]"%(x,))
     return x
 
 
@@ -47,14 +48,12 @@ def get_pred_df(clustering, dataset):
             clustered_sentences[cluster_id] = []
 
         clustered_sentences[cluster_id].append(corpus[sentence_id])
-    # print(len(clustered_sentences))
+    
     for i, cluster in clustered_sentences.items():
-        # print("Cluster ", i+1)
-        print(cluster)
         for element in cluster:
             pseudo_label.append(i)
             log_message.append(element)
-        # print("")
+
     cluster_label = pd.DataFrame({
         'message': log_message,
         'cluster_id': pseudo_label
@@ -68,10 +67,6 @@ def evaluate(input_features, cluster_labels):
     calinski_harabasz_avg = calinski_harabasz_score(input_features, cluster_labels)
 
     return silhouette_avg, calinski_harabasz_avg
-    # {
-    #     'silhouette_avg': silhouette_avg,
-    #     'calinski_harabasz': calinski_harabasz_avg
-    # }
 
 
 def get_features(dataset, embedding):
@@ -80,8 +75,11 @@ def get_features(dataset, embedding):
         embedding_model = SentenceTransformer('all-mpnet-base-v2')
         corpus_embeddings = embedding_model.encode(corpus)
     else:
-        embedding_model = SentenceTransformer(embedding)
-        corpus_embeddings = embedding_model.encode(corpus, prompt="Represent the Drone Log message for clustering: ")
+        embedding_model = INSTRUCTOR(f'hkunlp/{embedding}')
+        log_dict = []
+        for ind in dataset.index:
+            log_dict.append(['Represent the Drone Log message for clustering: ', dataset['message'][ind]])
+        corpus_embeddings = embedding_model.encode(log_dict)
     
     return corpus_embeddings
 
@@ -95,7 +93,6 @@ def compute_distance_matrix(corpus_embeddings, is_norm=True):
 
 
 def save_results(arguments_dict, cluster_label_df, workdir):
-    
     file_path = os.path.join(workdir, 'prediction.xlsx')
     cluster_label_df.to_excel(file_path, index=False)
     with open(os.path.join(workdir, 'scenario_arguments.json'), 'w') as json_file:
@@ -106,8 +103,13 @@ def main():
     args = parser.parse_args()
     
     dataset = pd.read_csv('dataset/merged-manual-unique.csv')
-    workdir = os.path.join('experiments', args.output_dir, args.embedding, args.linkage, args.threshold)
-    if not os.path.exists(workdir):
+    workdir = os.path.join('experiments', args.output_dir, args.embedding, args.linkage, str(args.threshold))
+    print(f"[agglomerative] - Current scenario: {workdir}")
+    if os.path.exists(workdir):
+        if os.path.exists(os.path.join(workdir, 'scenario_arguments.json')):
+            print("[agglomerative] - Scenario has been executed.")
+            return 0
+    else:
         os.makedirs(workdir)
 
     corpus_embeddings = get_features(dataset, args.embedding)
@@ -129,8 +131,8 @@ def main():
     arguments_dict['started_at'] = str(started_at)
     arguments_dict['ended_at'] = str(ended_at)
     arguments_dict['duration'] = str(duration.total_seconds()) + ' seconds'
-    arguments_dict['silhouette_avg'] = silhouette_avg
-    arguments_dict['calinski_harabasz_avg'] = calinski_harabasz_avg
+    arguments_dict['silhouette_avg'] = str(silhouette_avg)
+    arguments_dict['calinski_harabasz_avg'] = str(calinski_harabasz_avg)
 
     save_results(arguments_dict, cluster_label_df, workdir)
 
