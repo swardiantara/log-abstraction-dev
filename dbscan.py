@@ -17,7 +17,7 @@ def restricted_float(x):
     except ValueError:
         raise argparse.ArgumentTypeError("%r not a floating-point literal" % (x,))
 
-    if x < 0.01 or x > 0.2:
+    if x < 0.1 or x > 1:
         raise argparse.ArgumentTypeError("%r not in range [0.05, 0.2]"%(x,))
     return x
 
