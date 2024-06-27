@@ -1,0 +1,10 @@
+{
+    "output_dir": "birch",
+    "embedding": "instructor-base",
+    "threshold": 0.12,
+    "started_at": "2024-06-27 14:44:38.418669",
+    "ended_at": "2024-06-27 14:44:38.547927",
+    "duration": "0.129258 seconds",
+    "silhouette_avg": "0.14620249",
+    "calinski_harabasz_avg": "15.113464781088894"
+}

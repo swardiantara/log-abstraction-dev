@@ -1,0 +1,10 @@
+{
+    "output_dir": "optics",
+    "embedding": "sbert",
+    "threshold": 0.2,
+    "started_at": "2024-06-27 14:52:39.005916",
+    "ended_at": "2024-06-27 14:52:39.556190",
+    "duration": "0.550274 seconds",
+    "silhouette_avg": "0.059388302",
+    "calinski_harabasz_avg": "3.4602233077938087"
+}

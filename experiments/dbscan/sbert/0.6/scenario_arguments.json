@@ -1,0 +1,10 @@
+{
+    "output_dir": "dbscan",
+    "embedding": "sbert",
+    "threshold": 0.6,
+    "started_at": "2024-06-25 03:03:53.784569",
+    "ended_at": "2024-06-25 03:03:53.789892",
+    "duration": "0.005323 seconds",
+    "silhouette_avg": "0.0346631",
+    "calinski_harabasz_avg": "1.5134818281034166"
+}
