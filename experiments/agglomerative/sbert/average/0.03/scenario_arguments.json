@@ -1,0 +1,11 @@
+{
+    "output_dir": "agglomerative",
+    "embedding": "sbert",
+    "linkage": "average",
+    "threshold": 0.03,
+    "started_at": "2024-06-25 02:31:39.135687",
+    "ended_at": "2024-06-25 02:31:39.144172",
+    "duration": "0.008485 seconds",
+    "silhouette_avg": "0.04760194",
+    "calinski_harabasz_avg": "42.682016759758035"
+}
