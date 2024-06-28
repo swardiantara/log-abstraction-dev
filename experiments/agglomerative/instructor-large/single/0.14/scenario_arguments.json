@@ -1,0 +1,11 @@
+{
+    "output_dir": "agglomerative",
+    "embedding": "instructor-large",
+    "linkage": "single",
+    "threshold": 0.14,
+    "started_at": "2024-06-25 02:39:09.434954",
+    "ended_at": "2024-06-25 02:39:09.440909",
+    "duration": "0.005955 seconds",
+    "silhouette_avg": "0.01806092",
+    "calinski_harabasz_avg": "1.865997745015778"
+}

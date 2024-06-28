@@ -1,0 +1,10 @@
+{
+    "output_dir": "hdbscan",
+    "embedding": "sbert",
+    "threshold": 0.1,
+    "started_at": "2024-06-25 03:39:23.096092",
+    "ended_at": "2024-06-25 03:39:23.114062",
+    "duration": "0.01797 seconds",
+    "silhouette_avg": "0.07126030352119289",
+    "calinski_harabasz_avg": "5.736694613939498"
+}
