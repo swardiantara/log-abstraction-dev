@@ -1,0 +1,12 @@
+{
+    "output_dir": "agglomerative_ajk",
+    "embedding": "sbert",
+    "linkage": "complete",
+    "threshold": 0.06,
+    "started_at": "2024-06-28 23:41:04.879461",
+    "ended_at": "2024-06-28 23:41:04.885331",
+    "duration": "0.00587 seconds",
+    "ami_score": "0.3950336717920865",
+    "silhouette_avg": "0.07482107",
+    "calinski_harabasz_avg": "26.738467481448563"
+}
