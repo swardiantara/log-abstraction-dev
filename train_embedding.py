@@ -27,7 +27,7 @@ class DroneLogsDataset(Dataset):
         return InputExample(texts=[row['message']], label=row['cluster_id'])
 
 # Load your dataset
-df = pd.read_csv(os.path.join('dataset', 'cluster_label.xlsx'))  # Assume the CSV has 'message' and 'cluster_id' columns
+df = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))  # Assume the CSV has 'message' and 'cluster_id' columns
 
 # Create pairs for contrastive learning
 def create_pairs(df):
