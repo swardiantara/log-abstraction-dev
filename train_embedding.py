@@ -6,9 +6,13 @@ from sentence_transformers import SentenceTransformer, InputExample, losses, mod
 from sentence_transformers.readers import InputExample
 from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 
+# Check if GPU is available
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print(f'Using device: {device}')
+
 # Step 1: Load a pre-trained model
 model_name = 'all-mpnet-base-v2'  # or 'hkunlp/instructor-xl'
-model = SentenceTransformer(model_name)
+model = SentenceTransformer(model_name).to(device)
 
 # Step 2: Prepare the dataset
 class DroneLogsDataset(Dataset):
@@ -42,7 +46,7 @@ def create_pairs(df):
 examples = create_pairs(df)
 
 # Step 3: Create DataLoader
-train_dataloader = DataLoader(examples, shuffle=True, batch_size=16)
+train_dataloader = DataLoader(examples, shuffle=True, batch_size=64)
 
 # Step 4: Define the contrastive loss
 train_loss = losses.ContrastiveLoss(model=model)
