@@ -76,7 +76,7 @@ def get_features(dataset, embedding):
         embedding_model = SentenceTransformer('all-mpnet-base-v2')
         corpus_embeddings = embedding_model.encode(corpus)
     elif embedding == 'drone-sbert':
-        model_path = os.path.join('experiments', 'embeddings', 'pytorch_model.bin')
+        model_path = os.path.join('experiments', 'embeddings')
         embedding_model = SentenceTransformer(model_path)
         corpus_embeddings = embedding_model.encode(corpus)
     else:

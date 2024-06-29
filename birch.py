@@ -7,7 +7,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 from InstructorEmbedding import INSTRUCTOR
 from sklearn.metrics.pairwise import pairwise_distances
-from sklearn.metrics import silhouette_score, calinski_harabasz_score
+from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
 from sklearn.cluster import AgglomerativeClustering, DBSCAN, Birch
 
 
@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--output_dir', type=str, default='birch',
                     help="Folder to store the experimental results. Default: birch")
-parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl'], default='sbert',
+parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--threshold', type=restricted_float,
                     help="Distance threshold for same cluster criteria [0.01,0.2]. Default: 0.07")
@@ -60,17 +60,22 @@ def get_pred_df(clustering, dataset):
     return cluster_label
 
 
-def evaluate(input_features, cluster_labels):
-    silhouette_avg = silhouette_score(input_features, cluster_labels)
-    calinski_harabasz_avg = calinski_harabasz_score(input_features, cluster_labels)
+def evaluate(input_features, labels_pred, labels_true):
+    silhouette_avg = silhouette_score(input_features, labels_pred)
+    calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
+    ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
 
-    return silhouette_avg, calinski_harabasz_avg
+    return ami_score, silhouette_avg, calinski_harabasz_avg
 
 
 def get_features(dataset, embedding):
     corpus = dataset['message'].to_list()
     if embedding == 'sbert':
         embedding_model = SentenceTransformer('all-mpnet-base-v2')
+        corpus_embeddings = embedding_model.encode(corpus)
+    elif embedding == 'drone-sbert':
+        model_path = os.path.join('experiments', 'embeddings')
+        embedding_model = SentenceTransformer(model_path)
         corpus_embeddings = embedding_model.encode(corpus)
     else:
         embedding_model = INSTRUCTOR(f'hkunlp/{embedding}')
@@ -100,12 +105,13 @@ def save_results(arguments_dict, cluster_label_df, workdir):
 def main():
     args = parser.parse_args()
     
-    dataset = pd.read_csv('dataset/merged-manual-unique.csv')
+    dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))
+    labels_true = dataset['cluster_id'].to_list()
     workdir = os.path.join('experiments', args.output_dir, args.embedding, str(args.threshold))
-    print(f"[dbscan] - Current scenario: {workdir}")
+    print(f"[birch] - Current scenario: {workdir}")
     if os.path.exists(workdir):
         if os.path.exists(os.path.join(workdir, 'scenario_arguments.json')):
-            print("[dbscan] - Scenario has been executed.")
+            print("[birch] - Scenario has been executed.")
             return 0
     else:
         os.makedirs(workdir)
@@ -118,7 +124,7 @@ def main():
     clustering_model.fit(corpus_embeddings)
     ended_at = datetime.datetime.now()
     
-    silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_)
+    ami_score, silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_, labels_true)
     cluster_label_df = get_pred_df(clustering_model.labels_, dataset)
     
     duration = ended_at - started_at
@@ -126,6 +132,7 @@ def main():
     arguments_dict['started_at'] = str(started_at)
     arguments_dict['ended_at'] = str(ended_at)
     arguments_dict['duration'] = str(duration.total_seconds()) + ' seconds'
+    arguments_dict['ami_score'] = str(ami_score)
     arguments_dict['silhouette_avg'] = str(silhouette_avg)
     arguments_dict['calinski_harabasz_avg'] = str(calinski_harabasz_avg)
 
