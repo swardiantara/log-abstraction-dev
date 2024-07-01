@@ -9,6 +9,7 @@ from InstructorEmbedding import INSTRUCTOR
 from sklearn.metrics.pairwise import pairwise_distances
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
 from sklearn.cluster import AgglomerativeClustering, DBSCAN
+from utils import evaluate
 
 
 def restricted_float(x):
@@ -60,12 +61,12 @@ def get_pred_df(clustering, dataset):
     return cluster_label
 
 
-def evaluate(input_features, labels_pred, labels_true):
-    silhouette_avg = silhouette_score(input_features, labels_pred)
-    calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
-    ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
+# def evaluate(input_features, labels_pred, labels_true):
+#     silhouette_avg = silhouette_score(input_features, labels_pred)
+#     calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
+#     ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
 
-    return ami_score, silhouette_avg, calinski_harabasz_avg
+#     return ami_score, silhouette_avg, calinski_harabasz_avg
 
 
 def get_features(dataset, embedding):
