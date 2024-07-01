@@ -1,0 +1,11 @@
+{
+    "output_dir": "dbscan-ajk",
+    "embedding": "drone-sbert",
+    "threshold": 0.5,
+    "started_at": "2024-06-29 19:17:05.617146",
+    "ended_at": "2024-06-29 19:17:05.621139",
+    "duration": "0.003993 seconds",
+    "ami_score": "0.9857019171395882",
+    "silhouette_avg": "0.5417618",
+    "calinski_harabasz_avg": "75.47202375085313"
+}
