@@ -42,12 +42,12 @@ def main():
         os.makedirs(workdir)
 
     corpus_embeddings = get_features(dataset, args.embedding)
-    distance_matrix = compute_distance_matrix(corpus_embeddings)
+    # distance_matrix = compute_distance_matrix(corpus_embeddings)
     clustering_model = hdbscan.HDBSCAN(min_cluster_size=2,
-                                    metric='precomputed',
+                                    metric='cosine',
                                     cluster_selection_epsilon=args.threshold)
     started_at = datetime.datetime.now()
-    clustering_model.fit(distance_matrix)
+    clustering_model.fit(corpus_embeddings)
     ended_at = datetime.datetime.now()
     
     ami_score, silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_, labels_true)
