@@ -30,7 +30,7 @@ parser.add_argument('--output_dir', type=str, default='dbscan',
 parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--threshold', type=restricted_float,
-                    help="Distance threshold for same cluster criteria [0.2,0.05]. Default: 0.07")
+                    help="Distance threshold for same cluster criteria [0.1,1]. Default: 0.1")
 
 
 def load_dataset(path):

@@ -63,8 +63,15 @@ def get_pred_df(clustering, dataset):
 
 
 def evaluate(input_features, labels_pred, labels_true):
-    silhouette_avg = silhouette_score(input_features, labels_pred)
-    calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
+    try:
+        silhouette_avg = silhouette_score(input_features, labels_pred)
+    except:
+        silhouette_avg = -1
+    
+    try:
+        calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
+    except:
+        calinski_harabasz_avg = -1
     ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
 
     return ami_score, silhouette_avg, calinski_harabasz_avg
