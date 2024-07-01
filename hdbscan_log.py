@@ -30,7 +30,8 @@ parser.add_argument('--threshold', type=restricted_float,
 def main():
     args = parser.parse_args()
     
-    dataset = pd.read_csv('dataset/merged-manual-unique.csv')
+    dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))
+    labels_true = dataset['cluster_id'].to_list()
     workdir = os.path.join('experiments', args.output_dir, args.embedding, str(args.threshold))
     print(f"[hdbscan] - Current scenario: {workdir}")
     if os.path.exists(workdir):
@@ -49,7 +50,7 @@ def main():
     clustering_model.fit(distance_matrix)
     ended_at = datetime.datetime.now()
     
-    silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_)
+    ami_score, silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_, labels_true)
     cluster_label_df = get_pred_df(clustering_model.labels_, dataset)
     
     duration = ended_at - started_at
@@ -57,6 +58,7 @@ def main():
     arguments_dict['started_at'] = str(started_at)
     arguments_dict['ended_at'] = str(ended_at)
     arguments_dict['duration'] = str(duration.total_seconds()) + ' seconds'
+    arguments_dict['ami_score'] = str(ami_score)
     arguments_dict['silhouette_avg'] = str(silhouette_avg)
     arguments_dict['calinski_harabasz_avg'] = str(calinski_harabasz_avg)
 
