@@ -1,4 +1,5 @@
 import os
+import numpy as np
 import datetime
 import argparse
 import pandas as pd
@@ -42,12 +43,12 @@ def main():
         os.makedirs(workdir)
 
     corpus_embeddings = get_features(dataset, args.embedding)
-    # distance_matrix = compute_distance_matrix(corpus_embeddings)
+    distance_matrix = compute_distance_matrix(corpus_embeddings)
     clustering_model = hdbscan.HDBSCAN(min_cluster_size=2,
-                                    metric='cosine',
+                                    metric='precomputed',
                                     cluster_selection_epsilon=args.threshold)
     started_at = datetime.datetime.now()
-    clustering_model.fit(corpus_embeddings)
+    clustering_model.fit(distance_matrix.astype(np.float64))
     ended_at = datetime.datetime.now()
     
     ami_score, silhouette_avg, calinski_harabasz_avg = evaluate(corpus_embeddings, clustering_model.labels_, labels_true)
