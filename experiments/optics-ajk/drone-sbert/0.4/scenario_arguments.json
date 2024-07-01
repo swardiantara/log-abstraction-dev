@@ -1,0 +1,11 @@
+{
+    "output_dir": "optics-ajk",
+    "embedding": "drone-sbert",
+    "threshold": 0.4,
+    "started_at": "2024-07-01 12:46:28.510626",
+    "ended_at": "2024-07-01 12:46:29.091175",
+    "duration": "0.580549 seconds",
+    "ami_score": "0.23820115993847865",
+    "silhouette_avg": "0.27909622",
+    "calinski_harabasz_avg": "4.666471893942982"
+}
