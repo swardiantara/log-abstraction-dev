@@ -1,0 +1,11 @@
+{
+    "output_dir": "hdbscan-ajk",
+    "embedding": "instructor-base",
+    "threshold": 0.1,
+    "started_at": "2024-07-01 14:04:18.460495",
+    "ended_at": "2024-07-01 14:04:18.476989",
+    "duration": "0.016494 seconds",
+    "ami_score": "0.08249631353743835",
+    "silhouette_avg": "0.024732105",
+    "calinski_harabasz_avg": "6.090909168443275"
+}
