@@ -1,14 +1,16 @@
 import os
 import json
+import torch
 import datetime
 import argparse
 import numpy as np
 import pandas as pd
-from sentence_transformers import SentenceTransformer
 from InstructorEmbedding import INSTRUCTOR
+from transformers import AutoModel, AutoTokenizer
+from sklearn.cluster import AgglomerativeClustering
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import pairwise_distances
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
-from sklearn.cluster import AgglomerativeClustering
 
 
 def restricted_float(x):
@@ -26,7 +28,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--output_dir', type=str, default='agglomerative',
                     help="Folder to store the experimental results. Default: agglomerative")
-parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
+parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert', 'simcse'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--linkage', choices=['ward', 'complete', 'average', 'single'], default='average',
                     help="Linkage method to be used. Default: average")
@@ -86,6 +88,13 @@ def get_features(dataset, embedding):
         model_path = os.path.join('experiments', 'embeddings')
         embedding_model = SentenceTransformer(model_path)
         corpus_embeddings = embedding_model.encode(corpus)
+    elif embedding == 'simcse':
+        model_path = 'princeton-nlp/sup-simcse-roberta-large'
+        model = AutoModel.from_pretrained(model_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        inputs = tokenizer(corpus, padding=True, truncation=True, return_tensors="pt")
+        with torch.no_grad():
+            corpus_embeddings = model(**inputs, output_hidden_states=True, return_dict=True).pooler_output
     else:
         embedding_model = INSTRUCTOR(f'hkunlp/{embedding}')
         log_dict = []
