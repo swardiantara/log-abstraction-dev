@@ -29,7 +29,7 @@ parser.add_argument('--threshold', type=restricted_float,
 
 
 def main():
-    os.environ['TOKENIZERS_PARALLELISM'] = False
+    os.environ['TOKENIZERS_PARALLELISM'] = "false"
     args = parser.parse_args()
     
     dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))
