@@ -1,0 +1,12 @@
+{
+    "output_dir": "agglomerative_ajk",
+    "embedding": "instructor-base",
+    "linkage": "complete",
+    "threshold": 0.1,
+    "started_at": "2024-07-02 15:33:31.691523",
+    "ended_at": "2024-07-02 15:33:31.700368",
+    "duration": "0.008845 seconds",
+    "ami_score": "0.6878243976805585",
+    "silhouette_avg": "0.21443777",
+    "calinski_harabasz_avg": "7.9416873258835325"
+}
