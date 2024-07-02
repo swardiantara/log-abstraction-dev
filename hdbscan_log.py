@@ -22,13 +22,14 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--output_dir', type=str, default='hdbscan',
                     help="Folder to store the experimental results. Default: hdbscan")
-parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
+parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert', 'simcse'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--threshold', type=restricted_float,
                     help="Distance threshold for same cluster criteria [0.2,0.05]. Default: 0.07")
 
 
 def main():
+    os.environ['TOKENIZERS_PARALLELISM'] = False
     args = parser.parse_args()
     
     dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))

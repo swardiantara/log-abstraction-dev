@@ -1,14 +1,9 @@
 import os
-import json
 import datetime
 import argparse
-import numpy as np
 import pandas as pd
-from sentence_transformers import SentenceTransformer
-from InstructorEmbedding import INSTRUCTOR
-from sklearn.metrics.pairwise import pairwise_distances
-from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
-from sklearn.cluster import AgglomerativeClustering, DBSCAN
+from utils import get_features, get_pred_df, evaluate, compute_distance_matrix, save_results
+from sklearn.cluster import DBSCAN
 from utils import evaluate
 
 
@@ -27,83 +22,14 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--output_dir', type=str, default='dbscan',
                     help="Folder to store the experimental results. Default: dbscan")
-parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
+parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert', 'simcse'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--threshold', type=restricted_float,
                     help="Distance threshold for same cluster criteria [0.1,1]. Default: 0.1")
 
 
-def load_dataset(path):
-    return pd.read_csv(path)
-
-
-def get_pred_df(clustering, dataset):
-    corpus = dataset['message'].to_list()
-    pseudo_label = []
-    log_message = []
-    clustered_sentences = {}
-    for sentence_id, cluster_id in enumerate(clustering):
-        if cluster_id not in clustered_sentences:
-            clustered_sentences[cluster_id] = []
-
-        clustered_sentences[cluster_id].append(corpus[sentence_id])
-    
-    for i, cluster in clustered_sentences.items():
-        for element in cluster:
-            pseudo_label.append(i)
-            log_message.append(element)
-
-    cluster_label = pd.DataFrame({
-        'message': log_message,
-        'cluster_id': pseudo_label
-    })
-
-    return cluster_label
-
-
-# def evaluate(input_features, labels_pred, labels_true):
-#     silhouette_avg = silhouette_score(input_features, labels_pred)
-#     calinski_harabasz_avg = calinski_harabasz_score(input_features, labels_pred)
-#     ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
-
-#     return ami_score, silhouette_avg, calinski_harabasz_avg
-
-
-def get_features(dataset, embedding):
-    corpus = dataset['message'].to_list()
-    if embedding == 'sbert':
-        embedding_model = SentenceTransformer('all-mpnet-base-v2')
-        corpus_embeddings = embedding_model.encode(corpus)
-    elif embedding == 'drone-sbert':
-        model_path = os.path.join('experiments', 'embeddings')
-        embedding_model = SentenceTransformer(model_path)
-        corpus_embeddings = embedding_model.encode(corpus)
-    else:
-        embedding_model = INSTRUCTOR(f'hkunlp/{embedding}')
-        log_dict = []
-        for ind in dataset.index:
-            log_dict.append(['Represent the Drone Log message for clustering: ', dataset['message'][ind]])
-        corpus_embeddings = embedding_model.encode(log_dict)
-    
-    return corpus_embeddings
-
-
-def compute_distance_matrix(corpus_embeddings, is_norm=True):
-    if is_norm:
-        corpus_embeddings = corpus_embeddings /  np.linalg.norm(corpus_embeddings, axis=1, keepdims=True)
-
-    distance_matrix = pairwise_distances(corpus_embeddings, corpus_embeddings, metric='cosine')
-    return distance_matrix
-
-
-def save_results(arguments_dict, cluster_label_df, workdir):
-    file_path = os.path.join(workdir, 'prediction.xlsx')
-    cluster_label_df.to_excel(file_path, index=False)
-    with open(os.path.join(workdir, 'scenario_arguments.json'), 'w') as json_file:
-        json.dump(arguments_dict, json_file, indent=4)
-
-
 def main():
+    os.environ['TOKENIZERS_PARALLELISM'] = False
     args = parser.parse_args()
     
     dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))

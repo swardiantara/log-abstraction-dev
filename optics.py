@@ -21,13 +21,14 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--output_dir', type=str, default='optics',
                     help="Folder to store the experimental results. Default: optics")
-parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert'], default='sbert',
+parser.add_argument('--embedding', choices=['sbert', 'instructor-base', 'instructor-large', 'instructor-xl', 'drone-sbert', 'simcse'], default='sbert',
                     help="Embedding model to extract the log's feature. Default: sbert")
 parser.add_argument('--threshold', type=restricted_float, default=0.5,
                     help="Distance threshold for same cluster criteria [0.1,1]. Default: 0.5")
 
 
 def main():
+    os.environ['TOKENIZERS_PARALLELISM'] = False
     args = parser.parse_args()
     
     dataset = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))

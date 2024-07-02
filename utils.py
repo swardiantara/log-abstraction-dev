@@ -1,8 +1,10 @@
 import os
 import json
+import torch
 import numpy as np
 import pandas as pd
 from InstructorEmbedding import INSTRUCTOR
+from transformers import AutoModel, AutoTokenizer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import pairwise_distances
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
@@ -17,6 +19,13 @@ def get_features(dataset, embedding):
         model_path = os.path.join('experiments', 'embeddings')
         embedding_model = SentenceTransformer(model_path)
         corpus_embeddings = embedding_model.encode(corpus)
+    elif embedding == 'simcse':
+        model_path = 'princeton-nlp/sup-simcse-roberta-large'
+        model = AutoModel.from_pretrained(model_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        inputs = tokenizer(corpus, padding=True, truncation=True, return_tensors="pt")
+        with torch.no_grad():
+            corpus_embeddings = model(**inputs, output_hidden_states=True, return_dict=True).pooler_output
     else:
         embedding_model = INSTRUCTOR(f'hkunlp/{embedding}')
         log_dict = []
