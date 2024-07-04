@@ -1,0 +1,11 @@
+{
+    "output_dir": "dbscan-ajk",
+    "embedding": "instructor-xl",
+    "threshold": 0.06,
+    "started_at": "2024-07-04 18:12:07.556391",
+    "ended_at": "2024-07-04 18:12:07.560971",
+    "duration": "0.00458 seconds",
+    "ami_score": "0.7029052092495522",
+    "silhouette_avg": "0.17179908",
+    "calinski_harabasz_avg": "13.677586281247931"
+}
