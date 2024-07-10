@@ -1,0 +1,12 @@
+{
+    "output_dir": "agglomerative_ajk",
+    "embedding": "simcse",
+    "linkage": "average",
+    "threshold": 0.27,
+    "started_at": "2024-07-10 09:53:13.437126",
+    "ended_at": "2024-07-10 09:53:13.445051",
+    "duration": "0.007925 seconds",
+    "ami_score": "0.5941572165499179",
+    "silhouette_avg": "0.19101022",
+    "calinski_harabasz_avg": "7.857922757746521"
+}
