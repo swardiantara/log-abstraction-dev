@@ -55,7 +55,7 @@ def get_pred_df(clustering, dataset):
     cluster_label = pd.DataFrame({
         'message': log_message,
         'cluster_id': pseudo_label
-    })
+    }).sort_values(by='message')
 
     return cluster_label
 
