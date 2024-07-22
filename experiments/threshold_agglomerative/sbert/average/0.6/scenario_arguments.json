@@ -1,0 +1,12 @@
+{
+    "output_dir": "threshold_agglomerative",
+    "embedding": "sbert",
+    "linkage": "average",
+    "threshold": 0.6,
+    "started_at": "2024-07-22 19:14:03.760758",
+    "ended_at": "2024-07-22 19:14:03.768561",
+    "duration": "0.007803 seconds",
+    "ami_score": "0.4081204629342512",
+    "silhouette_avg": "0.13774206",
+    "calinski_harabasz_avg": "6.8748209417552975"
+}

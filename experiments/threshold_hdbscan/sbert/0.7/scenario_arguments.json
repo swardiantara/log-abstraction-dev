@@ -1,0 +1,11 @@
+{
+    "output_dir": "threshold_hdbscan",
+    "embedding": "sbert",
+    "threshold": 0.7,
+    "started_at": "2024-07-22 19:15:31.924299",
+    "ended_at": "2024-07-22 19:15:31.942965",
+    "duration": "0.018666 seconds",
+    "ami_score": "0.024316414913246227",
+    "silhouette_avg": "0.04855572",
+    "calinski_harabasz_avg": "3.7324942567340975"
+}

@@ -1,0 +1,11 @@
+{
+    "output_dir": "threshold_dbscan",
+    "embedding": "sbert",
+    "threshold": 0.6,
+    "started_at": "2024-07-22 19:15:01.098679",
+    "ended_at": "2024-07-22 19:15:01.103548",
+    "duration": "0.004869 seconds",
+    "ami_score": "0.004147196313050712",
+    "silhouette_avg": "0.034671634",
+    "calinski_harabasz_avg": "1.5134826431270074"
+}
