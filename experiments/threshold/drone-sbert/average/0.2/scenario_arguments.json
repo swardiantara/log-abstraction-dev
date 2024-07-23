@@ -1,0 +1,12 @@
+{
+    "output_dir": "threshold",
+    "embedding": "drone-sbert",
+    "linkage": "average",
+    "threshold": 0.2,
+    "started_at": "2024-07-23 20:56:18.843999",
+    "ended_at": "2024-07-23 20:56:18.852124",
+    "duration": "0.008125 seconds",
+    "ami_score": "1.0",
+    "silhouette_avg": "0.5487194",
+    "calinski_harabasz_avg": "343.46682401517216"
+}
