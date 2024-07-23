@@ -1,0 +1,11 @@
+{
+    "output_dir": "threshold_birch",
+    "embedding": "drone-sbert",
+    "threshold": 0.1,
+    "started_at": "2024-07-23 21:08:32.315642",
+    "ended_at": "2024-07-23 21:08:32.437411",
+    "duration": "0.121769 seconds",
+    "ami_score": "0.9937081444795087",
+    "silhouette_avg": "0.53632915",
+    "calinski_harabasz_avg": "349.75247132067466"
+}
