@@ -1,0 +1,11 @@
+{
+    "output_dir": "threshold_optics",
+    "embedding": "drone-sbert",
+    "threshold": 0.5,
+    "started_at": "2024-07-23 21:10:11.524141",
+    "ended_at": "2024-07-23 21:10:12.117493",
+    "duration": "0.593352 seconds",
+    "ami_score": "0.24177322788745234",
+    "silhouette_avg": "0.27739796",
+    "calinski_harabasz_avg": "4.698531895777904"
+}
