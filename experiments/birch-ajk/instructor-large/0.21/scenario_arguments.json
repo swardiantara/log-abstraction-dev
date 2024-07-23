@@ -1,0 +1,11 @@
+{
+    "output_dir": "birch-ajk",
+    "embedding": "instructor-large",
+    "threshold": 0.21,
+    "started_at": "2024-07-23 18:56:20.231152",
+    "ended_at": "2024-07-23 18:56:20.355846",
+    "duration": "0.124694 seconds",
+    "ami_score": "0.6779213816829969",
+    "silhouette_avg": "0.17854574",
+    "calinski_harabasz_avg": "7.854511978743776"
+}
