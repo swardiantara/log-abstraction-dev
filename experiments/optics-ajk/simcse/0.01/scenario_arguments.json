@@ -1,0 +1,11 @@
+{
+    "output_dir": "optics-ajk",
+    "embedding": "simcse",
+    "threshold": 0.01,
+    "started_at": "2024-07-23 20:40:19.618776",
+    "ended_at": "2024-07-23 20:40:19.674759",
+    "duration": "0.055983 seconds",
+    "ami_score": "-0.0054022029483852185",
+    "silhouette_avg": "-0.17090648",
+    "calinski_harabasz_avg": "2.194514697482876"
+}

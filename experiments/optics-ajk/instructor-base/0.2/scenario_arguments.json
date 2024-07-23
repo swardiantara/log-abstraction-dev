@@ -2,9 +2,9 @@
     "output_dir": "optics-ajk",
     "embedding": "instructor-base",
     "threshold": 0.2,
-    "started_at": "2024-07-02 15:15:51.557074",
-    "ended_at": "2024-07-02 15:15:52.749636",
-    "duration": "1.192562 seconds",
+    "started_at": "2024-07-23 20:41:05.706684",
+    "ended_at": "2024-07-23 20:41:06.904063",
+    "duration": "1.197379 seconds",
     "ami_score": "0.2815803910857973",
     "silhouette_avg": "0.11450452",
     "calinski_harabasz_avg": "4.071941722494237"

@@ -1,0 +1,11 @@
+{
+    "output_dir": "optics-ajk",
+    "embedding": "instructor-xl",
+    "threshold": 0.29,
+    "started_at": "2024-07-23 20:45:05.435162",
+    "ended_at": "2024-07-23 20:45:06.406063",
+    "duration": "0.970901 seconds",
+    "ami_score": "0.31904446454478863",
+    "silhouette_avg": "0.13874942",
+    "calinski_harabasz_avg": "4.697331183962438"
+}
