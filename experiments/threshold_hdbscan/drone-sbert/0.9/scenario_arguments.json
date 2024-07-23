@@ -1,0 +1,11 @@
+{
+    "output_dir": "threshold_hdbscan",
+    "embedding": "drone-sbert",
+    "threshold": 0.9,
+    "started_at": "2024-07-23 21:09:52.372883",
+    "ended_at": "2024-07-23 21:09:52.393314",
+    "duration": "0.020431 seconds",
+    "ami_score": "0.02693087031292162",
+    "silhouette_avg": "0.0058749337",
+    "calinski_harabasz_avg": "4.987387639308095"
+}
