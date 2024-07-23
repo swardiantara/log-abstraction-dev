@@ -1,0 +1,11 @@
+{
+    "output_dir": "dbscan-ajk",
+    "embedding": "simcse",
+    "threshold": 0.25,
+    "started_at": "2024-07-23 19:18:20.698417",
+    "ended_at": "2024-07-23 19:18:20.703455",
+    "duration": "0.005038 seconds",
+    "ami_score": "0.27098831672779167",
+    "silhouette_avg": "-0.011200372",
+    "calinski_harabasz_avg": "2.52198151701106"
+}

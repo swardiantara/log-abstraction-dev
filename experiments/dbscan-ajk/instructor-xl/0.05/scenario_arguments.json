@@ -2,10 +2,10 @@
     "output_dir": "dbscan-ajk",
     "embedding": "instructor-xl",
     "threshold": 0.05,
-    "started_at": "2024-07-04 18:07:31.839490",
-    "ended_at": "2024-07-04 18:07:32.152735",
-    "duration": "0.313245 seconds",
-    "ami_score": "0.031768003451504205",
-    "silhouette_avg": "-0.046717912",
-    "calinski_harabasz_avg": "2.8154504998389327"
+    "started_at": "2024-07-23 19:38:42.995215",
+    "ended_at": "2024-07-23 19:38:42.999792",
+    "duration": "0.004577 seconds",
+    "ami_score": "0.6478862413981712",
+    "silhouette_avg": "0.15985106",
+    "calinski_harabasz_avg": "16.19595961118687"
 }
