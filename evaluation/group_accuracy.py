@@ -144,6 +144,9 @@ def singleton_accuracy(df_groundtruth, df_parsedlog):
     # print(f'series_groundtruth_valuecounts: {series_groundtruth_valuecounts.columns}')
     series_parsedlog_valuecounts = series_parsedlog.value_counts()
     singleton_groundtruth = series_groundtruth_valuecounts[series_groundtruth_valuecounts == 1]
+    if len(singleton_groundtruth) < 1:
+        return 0, 0, 0
+    
     singleton_parsed = series_parsed_valuecounts[series_parsed_valuecounts == 1]
     
     # print(f'num of singleton: {len(singleton_groundtruth)}')
@@ -194,6 +197,9 @@ def precision_recall_f1(true_singleton_indices, pred_singleton_indices):
     recall: float.
     f1: float.
   """
+
+  if true_singleton_indices == 0:
+      return 0, 0, 0
 
   # Convert indices to sets for efficient intersection and union operations
   true_singletons = set(true_singleton_indices)
