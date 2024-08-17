@@ -76,7 +76,7 @@ def main():
     arguments_dict = vars(args)
     arguments_dict['started_at'] = str(started_at)
     arguments_dict['ended_at'] = str(ended_at)
-    arguments_dict['duration'] = str(round(duration.total_seconds() * 1000), 5) + ' miliseconds'
+    arguments_dict['duration'] = str(round(duration.total_seconds() * 1000, 5)) + ' miliseconds'
     arguments_dict['eval_score'] = eval_score
 
     save_results(arguments_dict, pred_df, workdir)
