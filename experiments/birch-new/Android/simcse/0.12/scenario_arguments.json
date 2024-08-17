@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Android",
+    "embedding": "simcse",
+    "threshold": 0.12,
+    "save_model": false,
+    "started_at": "2024-08-18 03:46:47.669143",
+    "ended_at": "2024-08-18 03:46:47.826357",
+    "duration": "157.214 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.502",
+        "singleton_f1": "0.30986",
+        "ami_score": "0.86982",
+        "nmi_score": "0.91805",
+        "ari_score": "0.83773",
+        "hgi_score": "1.0",
+        "cpi_score": "0.84852",
+        "vmi_score": "0.91805",
+        "fmi_score": "0.85388",
+        "silhouette_avg": "0.84866",
+        "calinski_harabasz_avg": "476880.60654"
+    }
+}
