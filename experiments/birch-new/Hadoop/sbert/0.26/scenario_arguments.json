@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Hadoop",
+    "embedding": "sbert",
+    "threshold": 0.26,
+    "save_model": false,
+    "started_at": "2024-08-18 06:57:35.117306",
+    "ended_at": "2024-08-18 06:57:35.250027",
+    "duration": "132.721 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.636",
+        "singleton_f1": "0.79675",
+        "ami_score": "0.98099",
+        "nmi_score": "0.9834",
+        "ari_score": "0.99504",
+        "hgi_score": "0.97365",
+        "cpi_score": "0.99336",
+        "vmi_score": "0.9834",
+        "fmi_score": "0.99567",
+        "silhouette_avg": "0.89104",
+        "calinski_harabasz_avg": "1243.72641"
+    }
+}
