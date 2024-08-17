@@ -55,7 +55,7 @@ def get_pred_df(clustering, dataset):
     cluster_label = pd.DataFrame({
         'message': log_message,
         'cluster_id': pseudo_label
-    }).sort_values(by='message')
+    }).sort_values(by='message').reset_index(drop=True)
 
     return cluster_label
 
@@ -66,9 +66,11 @@ def round_score(score_dict: dict, decimal=5):
 
     return score_dict
 
-def evaluation_score(input_features, df_truth, df_pred):
-    labels_pred = df_pred['cluster_id']
-    labels_true = df_truth['cluster_id']
+def evaluation_score(input_features, true_df: pd.DataFrame, pred_df: pd.DataFrame):
+    true_df = true_df.sort_values(by='message').reset_index(drop=True)
+    pred_df = pred_df.sort_values(by='message').reset_index(drop=True)
+    labels_pred = pred_df['cluster_id']
+    labels_true = true_df['cluster_id']
     try:
         silhouette_avg = silhouette_score(input_features, labels_pred)
     except:
@@ -79,8 +81,8 @@ def evaluation_score(input_features, df_truth, df_pred):
     except:
         calinski_harabasz_avg = -1
     ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
-    _, group_accuracy = evaluate(df_truth, df_pred)
-    singleton_acc, true_singleton_indices, pred_singleton_indices = singleton_accuracy(df_truth, df_pred)
+    _, group_accuracy = evaluate(true_df, pred_df)
+    singleton_acc, true_singleton_indices, pred_singleton_indices = singleton_accuracy(true_df, pred_df)
     _, _, singleton_f1 = precision_recall_f1(true_singleton_indices, pred_singleton_indices)
     nmi_score = normalized_mutual_info_score(labels_true, labels_pred)
     ari_score = adjusted_rand_score(labels_true, labels_pred)
@@ -114,7 +116,7 @@ def compute_distance_matrix(corpus_embeddings, is_norm=True):
     return distance_matrix
 
 
-def save_results(arguments_dict, cluster_label_df, workdir):
+def save_results(arguments_dict: dict, cluster_label_df: pd.DataFrame, workdir: str):
     file_path = os.path.join(workdir, 'prediction.xlsx')
     cluster_label_df.to_excel(file_path, index=False)
     with open(os.path.join(workdir, 'scenario_arguments.json'), 'w') as json_file:
