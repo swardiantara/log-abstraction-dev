@@ -7,8 +7,8 @@ from InstructorEmbedding import INSTRUCTOR
 from transformers import AutoModel, AutoTokenizer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import pairwise_distances
-from sklearn.metrics import silhouette_score, calinski_harabasz_score, adjusted_mutual_info_score
-
+from sklearn.metrics import adjusted_rand_score, homogeneity_score, completeness_score, v_measure_score, fowlkes_mallows_score, adjusted_mutual_info_score, normalized_mutual_info_score, silhouette_score, calinski_harabasz_score
+from evaluation.group_accuracy import evaluate, singleton_accuracy, precision_recall_f1
 
 def get_features(dataset, embedding):
     corpus = dataset['message'].to_list()
@@ -60,7 +60,15 @@ def get_pred_df(clustering, dataset):
     return cluster_label
 
 
-def evaluate(input_features, labels_pred, labels_true):
+def round_score(score_dict: dict, decimal=5):
+    for key, value in score_dict.items():
+        score_dict[key] = str(round(value, decimal))
+
+    return score_dict
+
+def evaluation_score(input_features, df_truth, df_pred):
+    labels_pred = df_pred['cluster_id']
+    labels_true = df_truth['cluster_id']
     try:
         silhouette_avg = silhouette_score(input_features, labels_pred)
     except:
@@ -71,8 +79,31 @@ def evaluate(input_features, labels_pred, labels_true):
     except:
         calinski_harabasz_avg = -1
     ami_score = adjusted_mutual_info_score(labels_true, labels_pred)
+    _, group_accuracy = evaluate(df_truth, df_pred)
+    singleton_acc, true_singleton_indices, pred_singleton_indices = singleton_accuracy(df_truth, df_pred)
+    _, _, singleton_f1 = precision_recall_f1(true_singleton_indices, pred_singleton_indices)
+    nmi_score = normalized_mutual_info_score(labels_true, labels_pred)
+    ari_score = adjusted_rand_score(labels_true, labels_pred)
+    hgi_score = homogeneity_score(labels_true, labels_pred)
+    cpi_score = completeness_score(labels_true, labels_pred)
+    vmi_score = v_measure_score(labels_true, labels_pred)
+    fmi_score = fowlkes_mallows_score(labels_true, labels_pred)
 
-    return ami_score, silhouette_avg, calinski_harabasz_avg
+    score_dict =  {
+        'group_accuracy': group_accuracy,
+        'singleton_f1': singleton_f1,
+        'ami_score': ami_score,
+        'nmi_score': nmi_score,
+        'ari_score': ari_score,
+        'hgi_score': hgi_score,
+        'cpi_score': cpi_score,
+        'vmi_score': vmi_score,
+        'fmi_score': fmi_score,
+        'silhouette_avg': silhouette_avg,
+        'calinski_harabasz_avg': calinski_harabasz_avg,
+    }
+
+    return round_score(score_dict)
 
 
 def compute_distance_matrix(corpus_embeddings, is_norm=True):

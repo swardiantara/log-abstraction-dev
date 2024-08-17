@@ -1,0 +1,817 @@
+LineId,Content,EventId,EventTemplate
+1,A passenger aircraft is approaching. Descend as soon as possible,E10,E10
+2,A passenger aircraft is nearby. Fly with caution,E10,E10
+3,AE Locked. Metering disabled,E200,E200
+4,AE Locked. Metering disabled,E200,E200
+5,APAS has been enabled,E136,E136
+6,APAS has been enabled,E136,E136
+7,API Automatic Return Home,E221,E221
+8,API Automatic Return Home,E221,E221
+9,API Automatic Takeoff,E159,E159
+10,API Automatic Takeoff,E159,E159
+11,Abnormal compass function or GPS signal detected. Aircraft switched to ATTI mode,E259,E259
+12,Abnormal compass function or GPS signal detected. Aircraft switched to ATTI mode,E259,E259
+13,Accelerator is Over Range,E224,E224
+14,Accelerator is Over Range,E224,E224
+15,Account not logged in. Flight altitude and distance restricted to nnn and nnn. Check and log in,E309,E309
+16,Account not logged in. Flight altitude and distance restricted to nnn and nnn. Check and log in,E309,E309
+17,ActiveTrack Flight Ended: Aircraft is entering a restricted area,E34,E34
+18,ActiveTrack Flight Ended: Cannot find subject,E178,E178
+19,ActiveTrack Flight Ended: Cannot find subject,E178,E178
+20,ActiveTrack Flight Ended: Control Signal Timeout (RC),E14,E14
+21,ActiveTrack Flight Ended: Control Signal Timeout (RC),E14,E14
+22,ActiveTrack Flight Paused,E285,E285
+23,ActiveTrack Flight Paused,E285,E285
+24,ActiveTrack Flight Stopped Aircraft Entering Restricted Area,E34,E34
+25,Advanced RTH Image Transmission Recovered. Aircraft is returning home,E268,E268
+26,AirSense communication error. Unable to display nearby manned aircraft and anti-collision warnings. Fly with caution,E215,E215
+27,AirSense communication error. Unable to display nearby manned aircraft and anti-collision warnings. Fly with caution,E215,E215
+28,Aircraft ActiveTrack available at max speed. Obstacle Avoidance is not available,E113,E113
+29,"Aircraft ActiveTrack available at max speed. When exceeding nnn, Obstacle Avoidance is not available",E113,E113
+30,Aircraft ActiveTrack max speed of nnn and Obstacle Avoidance functions normally,E335,E335
+31,Aircraft ActiveTrack max speed of nnn. Left and right Obstacle Sensing systems are available,E335,E335
+32,Aircraft Core Board Overheated,E54,E54
+33,Aircraft GPS interference. Aircraft unable to fly stably. Land or return to home promptly,E226,E226
+34,Aircraft GPS interference. Aircraft unable to fly stably. Land or return to home promptly,E226,E226
+35,Aircraft GPS signal too weak. Home Point not updated,E58,E58
+36,Aircraft antenna satellite signal searching error. Fly with caution,E236,E236
+37,Aircraft antenna satellite signal searching error. Fly with caution,E236,E236
+38,Aircraft approaching obstacle sensing blind spot and may be unable to detect obstacles. Fly with caution,E269,E269
+39,Aircraft approaching obstacle sensing blind spot and may be unable to detect obstacles. Fly with caution,E269,E269
+40,Aircraft battery level low. Return to home promptly,E12,E12
+41,Aircraft close to Home Point. go home shifts to landing.,E3,E3
+42,Aircraft entered Fixed-Wing Mode. Current flight speed is nnn. Press C2 to exit,E182,E182
+43,Aircraft entered Fixed-Wing Mode. Current flight speed is nnn. Press C2 to exit,E182,E182
+44,Aircraft exceeded distance limit and has exited Hyperlapse mode,E225,E225
+45,Aircraft exceeded distance limit and has exited Hyperlapse mode,E225,E225
+46,Aircraft flight control locked,E80,E80
+47,Aircraft flight control locked,E80,E80
+48,Aircraft flight control obtained by remote controller A,E36,E36
+49,Aircraft flight control obtained by remote controller B,E36,E36
+50,Aircraft flight control obtained by remote controller UNKNOWN,E36,E36
+51,Aircraft flight control unlocked,E326,E326
+52,Aircraft flight control unlocked,E326,E326
+53,Aircraft in Altitude Zone. Max altitude set to nnn,E302,E302
+54,Aircraft in Altitude Zone. Max altitude set to nnn,E302,E302
+55,Aircraft in Attitude mode. Unable to hover. Fly with caution ,E164,E164
+56,Aircraft in Authorization Zone. Unable to take off before unlocking,E219,E219
+57,Aircraft in Authorization Zone. Unable to take off before unlocking,E219,E219
+58,Aircraft in Restricted Zone. Unable to take off. Check map to find Recommended Zones,E130,E130
+59,Aircraft in Restricted Zones. Check map to find Recommended Zones,E130,E130
+60,Aircraft in high interference environment. Fly with caution,E43,E43
+61,Aircraft in high interference environment. Manually adjust flight route or return to home,E43,E43
+62,Aircraft is close to Home Point. Return-to-Home Mode is now Auto Landing Mode.,E3,E3
+63,Aircraft is close to the Home Point. Initiating Return to Home will now trigger Auto Landing.,E3,E3
+64,Aircraft is entering a restricted area,E34,E34
+65,Aircraft is flying back to the start point,E119,E119
+66,"Aircraft is in Attitude mode, so that it will not hover. Please fly with caution.",E164,E164
+67,Aircraft is in QuickShot Mode. Ensure your enviornment is free of potential obstacles.,E155,E155
+68,Aircraft is in QuickShot Mode. Ensure your enviornment is free of potential obstacles.,E155,E155
+69,Aircraft is in Sport Mode. Exit this mode and try again,E27,E27
+70,Aircraft is in Sport Mode. Exit this mode and try again,E27,E27
+71,Aircraft is in Tripod Mode. Exit this mode and try again,E296,E296
+72,Aircraft is in Tripod Mode. Exit this mode and try again,E296,E296
+73,"Aircraft is landing due to low voltage, which cannot be stopped. You can decelerate the descending speed and avoid obstacles using sticks",E284,E284
+74,Aircraft is now following you.,E185,E185
+75,Aircraft is now following you.,E185,E185
+76,Aircraft is returning to the Home Point. Minimum RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH if necessary.,E75,E75
+77,Aircraft is returning to the Home Point. Minimum RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.,E75,E75
+78,Aircraft is returning to the Home Point. Minimum RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.,E75,E75
+79,Aircraft is returning to the Home Point. Minimum RTH Altitude is 98ft. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH.,E75,E75
+80,Aircraft is returning to the Home Point. RTH Altitude is 30m. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH if necessary.,E75,E75
+81,Aircraft is returning to the Home Point. RTH Altitude is nnn. You can reset the RTH Altitude in Remote Controller Settings after cancelling RTH if necessary,E75,E75
+82,Aircraft is returning to the starting point,E119,E119
+83,"Aircraft is tilted, please keep the aircraft stationary and level before flight",E23,E23
+84,Aircraft is too far away,E59,E59
+85,"Aircraft max power load reached. Decrease altitude and fly with caution. If this issue persists, land immediately",E207,E207
+86,"Aircraft max power load reached. Decrease altitude and fly with caution. If this issue persists, land immediately",E207,E207
+87,Aircraft not in flight. Vision system and obstacle sensing unavailable,E177,E177
+88,Aircraft not in flight. Vision system and obstacle sensing unavailable,E177,E177
+89,Aircraft not linked to phone number. Flight range restricted. Check and link phone number,E158,E158
+90,Aircraft not linked to phone number. Flight range restricted. Check and link phone number,E158,E158
+91,Aircraft out of Range,E59,E59
+92,Aircraft pitch angle too large. Ensure aircraft is level before taking off,E23,E23
+93,Aircraft power insufficient. Fly with caution,E338,E338
+94,Aircraft power insufficient. Fly with caution,E338,E338
+95,Aircraft processor chip overheated. Power off aircraft and wait for temperature to return to normal,E54,E54
+96,Aircraft processor overheated. Automatically returning to home,E54,E54
+97,Aircraft propulsion system error. Forced landing. Manually control the aircraft and land in an open area,E233,E233
+98,Aircraft propulsion system error. Forced landing. Manually control the aircraft and land in an open area,E233,E233
+99,Aircraft settings updated to comply with national regulations,E244,E244
+100,Aircraft settings updated to comply with national regulations,E244,E244
+101,Aircraft switched to ATTI mode,E167,E167
+102,Aircraft switched to ATTI mode,E167,E167
+103,Aircraft takeoff altitude error. Restart aircraft,E310,E310
+104,Aircraft takeoff altitude error. Restart aircraft,E310,E310
+105,Aircraft too Far. Cannot enter Follow Me Mode,E67,E67
+106,Aircraft too Far. Cannot enter Follow Me Mode,E67,E67
+107,Aircraft unable to return to home automatically. Lower altitude immediately and return to home manually,E275,E275
+108,Aircraft unable to return to home automatically. Lower altitude immediately and return to home manually,E275,E275
+109,Aircraft will automatically descend in nnn,E21,E21
+110,"Aircraft will not enter S-mode if powered on with the remote controller set to S-mode. Please switch to Normal mode, then back to S-mode to enable it",E313,E313
+111,"Aircraft will not enter S-mode if powered on with the remote controller set to S-mode. Please switch to Normal mode, then back to S-mode to enable it",E313,E313
+112,Altitude Less than nnn. Cannot enable Follow Me Mode,E321,E321
+113,Altitude Less than nnn. Cannot enable Follow Me Mode,E321,E321
+114,Altitude Zone nnn,E104,E104
+115,Altitude Zone nnn,E104,E104
+116,Altitude above the takeoff point exceeds nnn. Always fly in compliance with altitude limitations,E303,E303
+117,Altitude above the takeoff point exceeds nnn. Always fly in compliance with altitude limitations,E303,E303
+118,Ambient Light is too weak.,E83,E83
+119,Ambient Light too Weak,E83,E83
+120,"Ambient Light too Weak, Backward obstacle sensing is unavailable. please ensure safety during the flight",E41,E41
+121,"Ambient Light too Weak, Forward obstacle sensing is unavailable. please ensure safety during the flight",E41,E41
+122,"Ambient Light too Weak, Vision Positioning obstacle sensing is unavailable. please ensure safety during the flight",E41,E41
+123,Ambient light too low. Vision system and obstacle sensing unavailable. Fly with caution,E41,E41
+124,"Another aircraft is dangerously close, please descend to a safer altitude",E10,E10
+125,Another aircraft is nearby. Another aircraft is approaching. Descend as soon as possible,E10,E10
+126,Another aircraft is nearby. Fly with caution,E10,E10
+127,Approaching NFZ or pre-set distance limit of (nnn). Revise Flight Route,E201,E201
+128,Approaching NFZ or pre-set distance limit of (nnn). Revise Flight Route,E201,E201
+129,Approaching a No-Fly Zone. RTH may be affected. Fly with caution,E68,E68
+130,Approaching a No-Fly Zone. RTH may be affected. Fly with caution,E68,E68
+131,Arrived at End Point,E162,E162
+132,Arrived at End Point,E162,E162
+133,Arrived at Start Point. Starting Waypoint Mission,E2,E2
+134,Arrived at destination,E251,E251
+135,Arrived at destination,E251,E251
+136,At Least Two Waypoints Required,E210,E210
+137,At least two Waypoints are needed,E210,E210
+138,Attitude is too large.,E37,E37
+139,Attitude is too large. Backward Obstacle Sensing is not functioning,E37,E37
+140,Attitude is too large. Backward obstacle sensing is unavailable,E37,E37
+141,Attitude is too large. Forward obstacle sensing is unavailable,E37,E37
+142,Attitude is too large. Backward Obstacle Sensing is not functioning.,E37,E37
+143,Auto Landing in nnn(s),E21,E21
+144,Auto landing initiated,E223,E223
+145,Auto landing initiated,E223,E223
+146,Auxiliary Bottom Light set to automatic mode,E319,E319
+147,Auxiliary Bottom Light set to automatic mode,E319,E319
+148,Auxiliary Bottom Light turned off,E320,E320
+149,Auxiliary Bottom Light turned off,E320,E320
+150,Auxiliary Bottom Light turned on,E63,E63
+151,Auxiliary Bottom Light turned on,E63,E63
+152,Away and Follow in progress.,E148,E148
+153,Away and Follow in progress.,E148,E148
+154,Backward Obstacle Sensing is not functioning.,E117,E117
+155,Backward Obstacle Sensing is not functioning. Ambient Light is too weak,E117,E117
+156,Backward ambient light too low. Backward obstacle avoidance unavailable. Only infrared sensors available. Fly with caution,E41,E41
+157,Backward sensor(s) blocked. Obstacle avoidance unavailable. Fly with caution,E231,E231
+158,Backward sensor(s) blocked. Obstacle avoidance unavailable. Fly with caution,E231,E231
+159,Barometer Dead in Air,E240,E240
+160,Barometer Dead in Air,E240,E240
+161,Barometer initialization failed. Restart aircraft,E304,E304
+162,Barometer initialization failed. Restart aircraft,E304,E304
+163,Battery Alert Battery installation error. Please check the batteries are inserted correctly,E299,E299
+164,Battery Alert Battery installation error. Please check the batteries are inserted correctly,E299,E299
+165,Battery Signal Error. Check battery connection.,E125,E125
+166,Battery Voltage Difference too large. Check Battery Status,E203,E203
+167,Battery Voltage Difference too large. Check Battery Status,E203,E203
+168,"Battery cell broken, please replace the battery",E300,E300
+169,"Battery cell broken, please replace the battery",E300,E300
+170,Battery cells undervoltage,E264,E264
+171,Battery cells undervoltage,E264,E264
+172,"Battery communication malfunction. Reinstall battery. If the issue persists, replace battery",E301,E301
+173,"Battery communication malfunction. Reinstall battery. If the issue persists, replace battery",E301,E301
+174,Battery error. Aircraft returning to home automatically,E52,E52
+175,Battery installed incorrectly. Detach battery and reinstall it,E29,E29
+176,Battery level low. Charge battery,E12,E12
+177,Battery nnn requires maintenance,E249,E249
+178,Battery nnn requires maintenance,E249,E249
+179,Battery not installed properly. Return to home immediately. Check and re-install battery,E29,E29
+180,Battery overheating. Stop flying and wait for battery temperature to return to normal,E294,E294
+181,Battery overheating. Stop flying and wait for battery temperature to return to normal,E294,E294
+182,Battery power limit will automatically reduce the aircraft's mobility to ensure flight safety,E57,E57
+183,Battery power low. Check battery status and charge or warm up battery,E12,E12
+184,Battery power restricted. Aircraft performance decreased to ensure flight safety. Return to home promptly,E57,E57
+185,Battery temperature is below 15 degrees Celsius. Warm up the battery temperature to above 25 degree Celsius to ensure a safe flight.,E26,E26
+186,Battery temperature too low. Fly with caution,E297,E297
+187,Battery temperature too low. Fly with caution,E297,E297
+188,Battery: Battery Error. Return home and land soon. View the checklist after landing,E52,E52
+189,Battery: Connection Error,E125,E125
+190,Battery: Low Voltage Protection,E314,E314
+191,Battery: Low Voltage Protection,E314,E314
+192,Battery: Overcurrent During Discharge,E161,E161
+193,Battery: Overcurrent During Discharge,E161,E161
+194,Braking now! No use to move the stick right. Avoid the obstacle,E15,E15
+195,Braking now! Return sticks to midpoints first.,E15,E15
+196,"Braking now. Return sticks to midpoints, then continue flying.",E15,E15
+197,Cache Space Full,E150,E150
+198,Cache Space Full,E150,E150
+199,Calibration subject is too close. Recalibrate using a subject that is farther away,E196,E196
+200,Calibration subject is too close. Recalibrate using a subject that is farther away,E196,E196
+201,Calibration target not far away enough. Please calibrate using infinity,E142,E142
+202,Calibration target not far away enough. Please calibrate using infinity,E142,E142
+203,"Camera Error. Solution: Restart the aircraft, if the problem persists, contact DJI Support",E64,E64
+204,Camera RCAM not connected. Image quality affected. Contact DJI Support for assistance,E325,E325
+205,Camera RCAM not connected. Image quality affected. Contact DJI Support for assistance,E325,E325
+206,Camera Settings ActiveTrack Optimized,E96,E96
+207,Camera Settings Adjusted,E96,E96
+208,Camera Settings Adjusted to ActiveTrack,E96,E96
+209,"Camera busy, cannot enter playback",E265,E265
+210,"Camera busy, cannot enter playback",E265,E265
+211,Camera error. AI Spot-Check failed. Restart camera,E258,E258
+212,Camera error. AI Spot-Check failed. Restart camera,E258,E258
+213,Camera not calibrated. Image quality affected. Contact DJI Support for assistance,E77,E77
+214,Camera not calibrated. Image quality affected. Contact DJI Support for assistance,E77,E77
+215,Camera sensor error Hardware malfunction: Contact DJI Support to arrange for repairs,E64,E64
+216,Camera storage full,E216,E216
+217,Camera storage full,E216,E216
+218,Cancel Landing Failed,E73,E73
+219,Cancel Return-to-Home Failed,E193,E193
+220,Cannot Enter TapFly Cannot fly in that direction,E256,E256
+221,Cannot Enter TapFly Cannot fly in that direction,E256,E256
+222,Cannot Identify Subject,E88,E88
+223,Cannot Takeoff in Travel Mode. Exit Travel Mode.,E238,E238
+224,Cannot Takeoff in Travel Mode. Exit Travel Mode.,E238,E238
+225,Cannot Track Subject. Cannot Identify Subject,E88,E88
+226,Cannot change current flight mode. Enable Multiple Flight Modes in Settings menu to change.,E9,E9
+227,Cannot enable Intelligent Flight Mode: Low Battery,E53,E53
+228,Cannot enable Intelligent Flight Mode: Low Battery,E53,E53
+229,Cannot enter ActiveTrack. Ambient Light is too weak,E132,E132
+230,Cannot enter ActiveTrack. Ambient Light is too weak,E132,E132
+231,Cannot enter TapFly Mode: Max Flight Altitude Reached. Adjust in Main Controller Settings if necessary,E4,E4
+232,Cannot enter the selected flight mode. Try again later.,E9,E9
+233,Cannot exit ActiveTrack,E312,E312
+234,Cannot exit ActiveTrack,E312,E312
+235,Cannot send ActiveTrack command,E47,E47
+236,Cannot send ActiveTrack command,E47,E47
+237,Cannot start Return to Home due to weak GPS signal,E58,E58
+238,Cannot start Self-Timer. Exposure time is too long,E197,E197
+239,Cannot start Self-Timer. Exposure time is too long,E197,E197
+240,"Cannot switch flight mode. Turn on ""Multiple Flight Modes"" to enable Atti and Sport Modes",E9,E9
+241,"Cannot switch flight mode. Turn on ""Multiple Flight Modes"" to enable Atti and Sport Modes.",E9,E9
+242,Cannot takeoff in a no-fly zone,E213,E213
+243,Cannot takeoff in a no-fly zone,E213,E213
+244,Cannot takeoff. Ensure the aircraft battery is properly connected,E189,E189
+245,Cannot takeoff. Ensure the aircraft battery is properly connected,E189,E189
+246,Cannot track subject: Forward Obstacle Sensing not Responding,E117,E117
+247,Cannot track subject: Gimbal Tilt too Large,E173,E173
+248,Cannot track subject: Gimbal Tilt too Large,E173,E173
+249,Cannot track subject: No image. Please retry,E330,E330
+250,Cannot track subject: No image. Please retry,E330,E330
+251,Cannot track subject: Subject too Large. Move Away and retry,E291,E291
+252,Cannot track subject: Subject too Large. Move Away and retry,E291,E291
+253,Cannot track subject: Subject too Small. Get Closer and retry,E20,E20
+254,Capture Failed Cannot enter Pano mode,E257,E257
+255,Capture Failed Cannot enter Pano mode,E257,E257
+256,Capture Failed Shooting interrupted,E42,E42
+257,Capture Failed Shooting interrupted,E42,E42
+258,Capture Failed Stick movement detected. Panorama has stopped,E204,E204
+259,Capture Failed Stick movement detected. Panorama has stopped,E204,E204
+260,Capture Failed. Distance limit exceeded. Cannot shoot panorama,E327,E327
+261,Capture Failed. Distance limit exceeded. Cannot shoot panorama,E327,E327
+262,Capture Failed. Insufficient storage space. Cannot shoot panorama,E328,E328
+263,Capture Failed. Insufficient storage space. Cannot shoot panorama,E328,E328
+264,Capture Failed. Shooting is currently not permitted,E308,E308
+265,Capture Failed. Shooting is currently not permitted,E308,E308
+266,Capture Failed. The aircraft is moving. Cannot shoot panorama,E329,E329
+267,Capture Failed. The aircraft is moving. Cannot shoot panorama,E329,E329
+268,Capture Failed. The gimbal is moving. Cannot shoot panorama,E81,E81
+269,Capture Failed. The gimbal is moving. Cannot shoot panorama,E81,E81
+270,"Check whether propellers are installed correctly. If the propellers are installed correctly and the aircraft still cannot takeoff, a motor error may exist. Contact DJI Support for assistance",E8,E8
+271,Check whether the propellers are attached to the correct motors based on their markings. Incorrect installation will cause the aircraft to roll over during takeoff,E8,E8
+272,Color display in Liveview is enhanced. Videos and photos will still be shot in D-Log mode,E70,E70
+273,Color display in the Liveview has been enhanced. Videos and photos will still be shot in D-Log mode,E70,E70
+274,Command Failed,E46,E46
+275,Command Timeout,E147,E147
+276,Compass Error,E6,E6
+277,Compass Error. Compass Error. Compass data error. Please contact DJI Support,E6,E6
+278,Compass Error. Compass Error. Compass disconnected,E6,E6
+279,Compass Error. Compass Redundancy Switch,E120,E120
+280,Compass Error. Compass data error. Please check the Compass installation and interference,E6,E6
+281,Compass Error. Compass data error. Please contact DJI Support,E6,E6
+282,Compass Error. Compass data error. Please contact DJI Support. Compass disconnected,E6,E6
+283,Compass Error. Compass direction is not the same with IMU,E69,E69
+284,Compass Error. Compass disconnected,E6,E6
+285,Compass Error. Compass error Solution: Move away from ground magnetic interference,E39,E39
+286,Compass Error. Compass interference. Please move the aircraft away from potential interference source or calibrate the compass,E39,E39
+287,Compass Error. Exit P-GPS Mode,E18,E18
+288,Compass Error. Magnetic Field Interference. Exit P-GPS Mode,E18,E18
+289,Compass Interference. Temp Max Altitude : 98ft,E180,E180
+290,Compass Interference. Temp Max Altitude: nnn,E180,E180
+291,Compass Redundancy Switch,E120,E120
+292,Compass Stuck. Restart Aircraft. Contact DJI Support if this persists.,E278,E278
+293,Compass Stuck. Restart Aircraft. Contact DJI Support if this persists.,E278,E278
+294,Compass abnormal Solution: 1. Ensure there are no magnets or metal objects near the aircraft. The ground or walls may contain metal. Move away from sources of interference before attempting flight. 2. Calibrate Compass Before Takeoff,E135,E135
+295,Compass data error. Please contact DJI Support,E6,E6
+296,Compass direction is not the same with IMU,E69,E69
+297,Compass error Solution: Move away from ground magnetic interference,E39,E39
+298,"Compass error, calibration required",E6,E6
+299,Compass error. Ensure there are no metal or magnetic objects near the aircraft and calibrate it before use,E135,E135
+300,Compass initialization failed. Restart aircraft,E311,E311
+301,Compass initialization failed. Restart aircraft,E311,E311
+302,Compass interference. Please move the aircraft away from potential interference source or calibrate the compass,E39,E39
+303,Correcting Landing Position,E38,E38
+304,Critical Low Battery,E282,E282
+305,Critical low battery voltage,E51,E51
+306,Critical low battery. Aircraft in Auto Power Off Protection. Forced landing in progress,E282,E282
+307,Critical low battery. Aircraft landing automatically,E282,E282
+308,Critical low battery. Aircraft returning to home,E282,E282
+309,Critical low battery. Recharge promptly,E282,E282
+310,Critical low battery. Return to home or land promptly,E282,E282
+311,Critical low battery. Unable to take off. Recharge promptly,E282,E282
+312,Critically Low Power. Aircraft Landing,E13,E13
+313,Critically Low Power. Aircraft Landing. Throttle up to reduce the speed of descent and use sticks to avoid obstacles,E13,E13
+314,Critically Low Voltage Warning. Aircraft will be forced to land,E284,E284
+315,"Critically Low Voltage Warning. Land as soon as possible, otherwise the battery will be damaged",E51,E51
+316,Critically Low Voltage. Aircraft will land,E284,E284
+317,Critically low power. Aircraft is landing,E13,E13
+318,CrystalSky is too hot. Cool down the monitor to prevent overheating,E156,E156
+319,CrystalSky is too hot. Cool down the monitor to prevent overheating,E156,E156
+320,Current RTH route will pass a No-Fly zone. Pay attention to the aircraft's position to avoid RTH failure.,E322,E322
+321,Current RTH route will pass a No-Fly zone. Pay attention to the aircraft's position to avoid RTH failure.,E322,E322
+322,Current elevation above nnn. Fly with caution,E232,E232
+323,Current elevation above nnn. Fly with caution,E232,E232
+324,Data Recorder File Index is 12.,E50,E50
+325,Data Recorder File Index is 13.,E50,E50
+326,Data Recorder File Index is 15.,E50,E50
+327,Data Recorder File Index is 17.,E50,E50
+328,Data Recorder File Index is 18.,E50,E50
+329,Data Recorder File Index is 19.,E50,E50
+330,Data Recorder File Index is 2.,E50,E50
+331,Data Recorder File Index is 21.,E50,E50
+332,Data Recorder File Index is 29.,E50,E50
+333,Data Recorder File Index is 3.,E50,E50
+334,Data Recorder File Index is 30.,E50,E50
+335,Data Recorder File Index is 4.,E50,E50
+336,Data Recorder File Index is 45.,E50,E50
+337,Data Recorder File Index is 46.,E50,E50
+338,Data Recorder File Index is 5.,E50,E50
+339,Data Recorder File Index is 57.,E50,E50
+340,Data Recorder File Index is 65.,E50,E50
+341,Data Recorder File Index is 7.,E50,E50
+342,Data Recorder File Index is 8.,E50,E50
+343,Descending. Exited Visual Avoidance System,E76,E76
+344,Detecting subject,E217,E217
+345,Detecting subject,E217,E217
+346,Disable SD card read and write protection or change card,E202,E202
+347,Disable SD card read and write protection or change card,E202,E202
+348,Distance limit enabled. Fly safely,E22,E22
+349,Distance limit enabled. Fly safely,E22,E22
+350,Downlink Lost.,E32,E32
+351,Downlink Restored (after 0m 0.9s).,E133,E133
+352,Downlink Restored (after 0m 1.1s).,E133,E133
+353,Downlink Restored (after 0m 1.2s).,E133,E133
+354,Downlink Restored (after 0m 1.4s).,E133,E133
+355,Downlink Restored (after 0m 1.5s).,E133,E133
+356,Downlink Restored (after 0m 1.6s).,E133,E133
+357,Downlink Restored (after 0m 1.7s).,E133,E133
+358,Downlink Restored (after 0m 11.3s).,E133,E133
+359,Downlink Restored (after 0m 11s).,E133,E133
+360,Downlink Restored (after 0m 1s).,E133,E133
+361,Downlink Restored (after 0m 2.2s).,E133,E133
+362,Downlink Restored (after 0m 2.3s).,E133,E133
+363,Downlink Restored (after 0m 2.9s).,E133,E133
+364,Downlink Restored (after 0m 5.6s).,E133,E133
+365,Downlink Restored (after 0m 5.8s).,E133,E133
+366,Downlink data connection lost for nnn seconds,E32,E32
+367,Downward Obstacle Sensing is not functioning. Ambient Light is too weak,E117,E117
+368,Downward altitude sensor data error. Please contact DJI Support for help,E112,E112
+369,Downward ambient light too low. Obstacle avoidance unavailable. Fly with caution,E41,E41
+370,Downward ambient light too low. Obstacle avoidance unavailable. Fly with caution. Backward ambient light too low. Backward obstacle avoidance unavailable. Only infrared sensors available. Fly with caution,E41,E41
+371,Downward infrared sensor failure. Land as soon as possible,E184,E184
+372,Downward infrared sensor failure. Land as soon as possible,E184,E184
+373,Downward sensor error. Aircraft unstable at low altitude. Please fly with caution,E112,E112
+374,Downward vision sensor calibration error. Auto calibration in progress,E263,E263
+375,Downward vision sensor error. Contact DJI Support for assistance,E124,E124
+376,Drag a box around or tap a target on screen. Then tap Go.,E170,E170
+377,Drag a box around or tap a target on screen. Then tap Go.,E170,E170
+378,Drone is Vibrating,E186,E186
+379,Drone is Vibrating,E186,E186
+380,"During Smart Track, you can control lens zoom within a certain limit",E166,E166
+381,"During Smart Track, you can control lens zoom within a certain limit",E166,E166
+382,EMMC is full,E138,E138
+383,EMMC is full,E138,E138
+384,Ensure control sticks are centered during takeoff,E172,E172
+385,Ensure control sticks are centered during takeoff,E172,E172
+386,Entered Cruise Control mode. Press C1 or C2 to exit,E91,E91
+387,Entered Cruise Control mode. Press C1 or C2 to exit,E91,E91
+388,Error: Course angle control error. Please ensure the propellers are installed on the correct motors,E260,E260
+389,Error: Course angle control error. Please ensure the propellers are installed on the correct motors,E260,E260
+390,"Excessive attitude angle detected, forward obstacle avoidance has stopped working",E174,E174
+391,"Excessive attitude angle detected, forward obstacle avoidance has stopped working",E174,E174
+392,Excessive gimbal vibration. Check whether gimbal can rotate freely,E40,E40
+393,Executing waypoint mission,E2,E2
+394,"Exit Backward Forward Downward Upward Sensing system, Ambient Light is too weak",E179,E179
+395,"Exit Backward Forward Downward Upward Sensing system, Ambient Light is too weak",E179,E179
+396,Exited Cruise Control mode,E332,E332
+397,Exited Cruise Control mode,E332,E332
+398,Exited Hyperlapse mode,E157,E157
+399,Exited Hyperlapse mode,E157,E157
+400,Exited Visual Avoidance System.,E76,E76
+401,Exiting GPS mode: Unknown Error,E290,E290
+402,Exiting GPS mode: Unknown Error,E290,E290
+403,Extended flight distance detected. Always maintain visual line of sight unless otherwise authorized,E55,E55
+404,Extended flight distance detected. Always maintain visual line of sight unless otherwise authorized,E55,E55
+405,Extra payload detected. Flight performance will be affected. Fly with caution,E128,E128
+406,Extra payload detected. Max altitude and distance set. Fly with caution,E118,E118
+407,Extra payload detected. Max altitude set to nnn and max distance set to nnn to ensure flight safety,E118,E118
+408,Extra payload detected. Return aircraft to an area nearby the home point promptly and fly in a wind-free environment to ensure flight safety,E127,E127
+409,Extra payload detected. Return the aircraft to an area nearby the home point promptly to ensure flight safety,E127,E127
+410,Failed to cancel Return to Home,E193,E193
+411,Failed to cancel landing,E73,E73
+412,Failed to lower or pack up landing gear. Take care of your gimbal when landing,E199,E199
+413,Failed to lower or pack up landing gear. Take care of your gimbal when landing,E199,E199
+414,Failed to take off. Check the USB connection with aircraft. Contact DJI Support if this error persists after restarting,E305,E305
+415,Failed to take off. Check the USB connection with aircraft. Contact DJI Support if this error persists after restarting,E305,E305
+416,File system error. Change SD card,E333,E333
+417,File system error. Change SD card,E333,E333
+418,Flight Mode Set to Attitude,E271,E271
+419,Flight Mode Set to Attitude,E271,E271
+420,Flight altitude exceeds nnn. Aircraft may be in violation of local laws and regulations. Check and make sure you have obtained proper authorization to fly in this airspace,E44,E44
+421,Flight altitude exceeds nnn. May violate local policies and regulations. Ensure you have obtained proper airspace authorization,E44,E44
+422,"Flight control mode error, cannot start recording QuickShot",E187,E187
+423,"Flight control mode error, cannot start recording QuickShot",E187,E187
+424,Flight distance may exceed line-of-sight. Fly with caution,E316,E316
+425,Flight distance may exceed line-of-sight. Fly with caution,E316,E316
+426,Flight height too low,E206,E206
+427,Flight height too low,E206,E206
+428,Fly with caution and ensure the aircraft remains within your line of sight.,E281,E281
+429,Fly with caution and ensure the aircraft remains within your line of sight.,E281,E281
+430,Fly with caution. Compass abnormal Solution: 1. Ensure there are no magnets or metal objects near the aircraft. The ground or walls may contain metal. Move away from sources of interference before,E135,E135
+431,Forward Obstacle Sensing is not functioning.,E117,E117
+432,Forward Obstacle Sensing is not functioning. Ambient Light is too weak,E117,E117
+433,Forward Obstacle Sensing not Responding,E117,E117
+434,Forward Obstacle Sensing not Working.,E117,E117
+435,Forward vision sensor calibration error. Auto calibration in progress,E263,E263
+436,Forward vision sensor error. Contact DJI Support for assistance,E124,E124
+437,GEO Zone Info: The target area is in an Altitude Zone. Flight altitude restricted to nnn,E334,E334
+438,GEO Zone Info: The target area is in an Altitude Zone. Flight altitude restricted to nnn,E334,E334
+439,GEO: You are in a Warning Zone (Airport Class Airspace Unpaved Airports Power Plant). Fly with caution,E242,E242
+440,GEO: You are in a Warning Zone (Airport Class Airspace Unpaved Airports Power Plant). Fly with caution,E242,E242
+441,GPS Position Mismatch.,E190,E190
+442,GPS Position Mismatch.,E190,E190
+443,GPS module error. Restart aircraft,E45,E45
+444,GPS signal low. Aircraft unable to auto hover and takeoff restricted. Move to environment with adequate light. Unlocking takeoff restrictions not recommended,E11,E11
+445,GPS signal weak. Fly with caution. Aircraft in Altitude Zone. Max altitude set to nnn,E11,E11
+446,GPS signal weak. Hovering unstable. Fly with caution,E11,E11
+447,GPS signal weak. Positioning accuracy affected. Fly with caution,E11,E11
+448,Gimbal IMU data error. Contact DJI Support for assistance,E298,E298
+449,Gimbal IMU data error. Contact DJI Support for assistance,E298,E298
+450,Gimbal Pitch Limit Reached.,E131,E131
+451,Gimbal Pitch Reached Movement Limit,E131,E131
+452,Gimbal Recenter,E89,E89
+453,Gimbal Roll Limit Reached.,E108,E108
+454,Gimbal Roll Limit Reached.,E108,E108
+455,Gimbal Yaw Limit Reached,E212,E212
+456,Gimbal Yaw Limit Reached,E212,E212
+457,Gimbal calibrating,E143,E143
+458,Gimbal calibrating,E143,E143
+459,Gimbal calibration error. Restart aircraft or contact DJI Support if the issue persists,E28,E28
+460,Gimbal calibration error. Restart aircraft or contact DJI Support if the issue persists,E28,E28
+461,Gimbal motor overloaded. Check whether gimbal can rotate freely,E40,E40
+462,Gimbal nnn pan axis endpoint reached,E62,E62
+463,Gimbal nnn pitch axis endpoint reached,E62,E62
+464,Gimbal nnn roll axis endpoint reached,E62,E62
+465,Gimbal stuck. Check whether gimbal lock is removed and ensure gimbal can rotate freely,E254,E254
+466,Gimbal stuck. Check whether gimbal lock is removed and ensure gimbal can rotate freely,E254,E254
+467,Ground Plain. Safe to Land.,E175,E175
+468,Ground Plain. Safe to Land.,E175,E175
+469,Gyroscope initialization failed. Restart aircraft,E31,E31
+470,Gyroscope initialization failed. Restart aircraft,E31,E31
+471,High Wind Velocity: Fly with caution and ensure the aircraft remains within your line of sight,E60,E60
+472,High altitude. Aircraft braking distance increased and flight time decreased. Fly with caution,E61,E61
+473,High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution.,E60,E60
+474,High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution. Downlink Lost.,E60,E60
+475,High wind velocity. Ensure the aircraft remains within your line of sight and fly with caution. High wind velocity. Fly with caution and land in a safe place ASAP.,E60,E60
+476,High wind velocity. Fly with caution and land in a safe place ASAP.,E60,E60
+477,High wind velocity. Fly with caution.,E60,E60
+478,"High-altitude flight, aircraft braking distance is extended, flight time is shortened. Fly with caution",E61,E61
+479,"Home Point Recorded, Return-to-Home Altitude : 98FT",E129,E129
+480,"Home Point Recorded, Return-to-Home Altitude : 98FT.",E129,E129
+481,Home Point Recorded.,E7,E7
+482,Home Point Recorded. RTH Altitude : 30m.,E324,E324
+483,Home Point Recorded. RTH Altitude : 30m.,E324,E324
+484,Home Point Recorded. Taking off.,E7,E7
+485,Home Point Updated.,E279,E279
+486,Home Point Updated.,E279,E279
+487,Home Point recorded. Return-to-Home Altitude : 98FT,E129,E129
+488,Home Point recorded. Return-to-Home Altitude : 98FT.,E129,E129
+489,Home Point updated. RTH altitude adjusted to nnn,E24,E24
+490,IMU attitude restricted. Ensure aircraft is level,E214,E214
+491,IMU attitude restricted. Ensure aircraft is level,E214,E214
+492,IMU calibration required. Calibrate IMU,E82,E82
+493,IMU not calibrated. Calibrate IMU,E82,E82
+494,IMU warming up. Wait before taking off,E149,E149
+495,IMU warming up. Wait before taking off,E149,E149
+496,Image Transmission Recovered. Aircraft is returning home.,E268,E268
+497,Image transmission signal lost,E228,E228
+498,Image transmission signal lost,E228,E228
+499,Impact detected. Aircraft stopped. Restart aircraft,E211,E211
+500,Impact detected. Restart aircraft,E211,E211
+501,In Flight.,E208,E208
+502,In Flight.,E208,E208
+503,Incompatible firmware version. Go to Profile > Settings to update firmware,E192,E192
+504,Incompatible firmware version. Go to Profile > Settings to update firmware,E192,E192
+505,Insufficient SD card space. Change card or delete files,E97,E97
+506,Intelligent Flight Modes have not been enabled. Enable this option in Main Controller Settings if needed.,E315,E315
+507,Intelligent Flight Modes have not been enabled. Enable this option in Main Controller Settings if needed.,E315,E315
+508,Landing Canceled.,E323,E323
+509,Landing Canceled.,E323,E323
+510,Landing Gear Lowered.,E102,E102
+511,Landing Gear Lowering.,E102,E102
+512,Landing Gear Paused.,E247,E247
+513,Landing Gear Paused.,E247,E247
+514,Landing Gear Raised.,E134,E134
+515,Landing Gear Raising.,E134,E134
+516,Landing Gear Raising. Home Point Recorded,E134,E134
+517,Landing Protection Activated. Aircraft will decelerate during landing.,E245,E245
+518,Landing Protection Activated. Aircraft will decelerate during landing.,E245,E245
+519,Landing gear function restored,E106,E106
+520,Landing gear function restored,E106,E106
+521,Landing gear lowered. Obstacle Avoidance Disabled.,E1,E1
+522,Landing gear lowered. Obstacle Avoidance has been disabled.,E1,E1
+523,Landing.,E307,E307
+524,Landing.,E307,E307
+525,Large Wind Velocity.,E234,E234
+526,Large Wind Velocity.,E234,E234
+527,Large Wind Velocity. Fly with caution.,E60,E60
+528,Lens not connected,E168,E168
+529,Lens not connected,E168,E168
+530,Lighting environment too dark. Vision System unavailable. Fly with caution,E84,E84
+531,Lighting environment too dark. Visual positioning inaccurate. Fly with caution,E84,E84
+532,Live stream video frame rate less than 9Hz. Fly with caution,E262,E262
+533,Live stream video frame rate less than 9Hz. Fly with caution,E262,E262
+534,Loading database failed. Geo-awareness function degraded,E92,E92
+535,Loading database failed. Geo-awareness function degraded,E92,E92
+536,Locating Landing Point,E38,E38
+537,Low Power. Aircraft is returning to the Home Point.,E163,E163
+538,Low Power. Returning home.,E163,E163
+539,Low battery voltage. Fly with caution,E51,E51
+540,Low battery. Recharge promptly,E12,E12
+541,Low battery. Return to home promptly,E12,E12
+542,"Low power, please replace the battery",E12,E12
+543,Magnetic Filed Interference. Exit P-GPS Mode,E111,E111
+544,Magnetic Filed Interference. Exit P-GPS Mode. Yaw Error.,E111,E111
+545,Manned aircraft approaching. Fly at a safe altitude,E10,E10
+546,Manned aircraft detected nearby. Fly with caution,E10,E10
+547,Manned aircraft too close. Fly at a safe altitude,E10,E10
+548,Max Altitude Approached. Wait for the GPS satellite signal recovery before ascend,E169,E169
+549,Max Altitude Approached. Wait for the GPS satellite signal recovery before ascend,E169,E169
+550,Max Flight Altitude Reached. Adjust in Main Controller Settings if necessary,E4,E4
+551,Max Flight Distance Reached. Adjust in Main Controller Settings if necessary.,E4,E4
+552,Max altitude reached (Altitude limit: nnn) ,E30,E30
+553,Maximum Flight Altitude Reached.,E30,E30
+554,Maximum Flight Altitude Reached. Adjust altitude in MC Settings if required.,E4,E4
+555,Maximum Flight Distance Reached. Adjust distance in MC Settings if required.,E4,E4
+556,Maximum flight distance reached. Adjust the distance in MC Settings if required.,E4,E4
+557,Min Waypoint Distance: nnn,E222,E222
+558,Min Waypoint Distance: nnn,E222,E222
+559,Mobile device CPU fully loaded. Related performance will be affected.,E248,E248
+560,Mobile device CPU fully loaded. Related performance will be affected.,E248,E248
+561,Mobile device version too old to support HD image transmission and the image transmission mode has been switch to normal mode.,E230,E230
+562,Mobile device version too old to support HD image transmission and the image transmission mode has been switch to normal mode.,E230,E230
+563,Motor Obstructed. Propulsion output is limited to ensure the health of the battery,E56,E56
+564,Motor error. Check propellers and fly with caution,E280,E280
+565,Motor idle. Check whether propellers are installed,E103,E103
+566,Motor is Blocked,E25,E25
+567,Motor is Blocked. Motor stuck. Check for objects blocking motor or contact DJI Support for assistance,E25,E25
+568,Motor is idling (lost or missing propeller),E103,E103
+569,Motor nnn propeller detached or installed incorrectly,E243,E243
+570,Motor nnn propeller detached or installed incorrectly,E243,E243
+571,Motor nnn stalled. Land aircraft immediately,E79,E79
+572,Motor nnn stalled. Land aircraft immediately,E79,E79
+573,Motor or propeller error. Check the motors and propellers.,E280,E280
+574,"Motor speed error. Land or return to home promptly. After powering off the aircraft, replace the propeller on the beeping ESC. If the issue persists, contact DJI Support",E306,E306
+575,"Motor speed error. Land or return to home promptly. After powering off the aircraft, replace the propeller on the beeping ESC. If the issue persists, contact DJI Support",E306,E306
+576,Motor stuck. Check for objects blocking motor or contact DJI Support for assistance ,E25,E25
+577,Motor unable to rotate. Check for objects blocking motor or contact DJI Support for assistance ,E107,E107
+578,Motor unable to rotate. Check motor,E107,E107
+579,Motors Started.,E205,E205
+580,Motors Started.,E205,E205
+581,Navigation system error. Restart aircraft,E45,E45
+582,No GPS signal. Aircraft unable to hover. Fly with caution,E276,E276
+583,No GPS signal. Unable to hover. Fly with caution,E276,E276
+584,No GPS signal. Unable to take off. Move to an open area or exit flight tutorial,E276,E276
+585,No GPS. Return to Home failed. Return the aircraft to home manually,E276,E276
+586,No SD card. Insert card,E93,E93
+587,No SD card. Insert card,E93,E93
+588,Not Allowed to change Aircraft Mode. If needed,E48,E48
+589,"Not Allowed to change Aircraft Mode. If needed, enable it in Main Controller Settings",E48,E48
+590,Not Enough Force/ESC Error,E139,E139
+591,Not Enough Force/ESC Error,E139,E139
+592,Object too close to laser rangefinder,E165,E165
+593,Object too close to laser rangefinder,E165,E165
+594,Object too far for laser rangefinder,E337,E337
+595,Object too far for laser rangefinder,E337,E337
+596,Obstacle Avoidance Disabled.,E1,E1
+597,Obstacle Avoidance Disabled. Landing gear lowered. Obstacle Avoidance Disabled.,E1,E1
+598,Obstacle Avoidance disabled. Fly with caution,E1,E1
+599,Obstacle Avoidance disabled. Landing gear lowered. Obstacle Avoidance has been disabled.,E1,E1
+600,Obstacle Avoidance will be disabled in landing.,E1,E1
+601,Obstacle Avoided. Revise Flight Route,E246,E246
+602,Obstacle Avoided. Revise Flight Route,E246,E246
+603,Obstacle Sensing will be disabled when aircraft is landing. Fly with caution.,E272,E272
+604,Obstacle Sensing will be disabled when aircraft is landing. Fly with caution.,E272,E272
+605,Obstacle sensing not available at night. Adjust RTH altitude to above tallest surrounding building before flying,E198,E198
+606,Obstacle sensing not available at night. Adjust RTH altitude to above tallest surrounding building before flying,E198,E198
+607,PalmControl in Process,E116,E116
+608,PalmControl in Process,E116,E116
+609,Pano shooting completed. The sky part is filled automatically,E176,E176
+610,Pano shooting completed. The sky part is filled automatically,E176,E176
+611,Pano successful,E218,E218
+612,Pano successful,E218,E218
+613,Panorama Captured Successfully,E153,E153
+614,Panorama Captured Successfully,E153,E153
+615,Payload mode enabled. Max altitude and distance set. Fly with caution,E118,E118
+616,Payload mode enabled. Max altitude set to nnn and max distance set to nnn to ensure flight safety,E118,E118
+617,Payload mode enabled. Max altitude set to nnn and max distance set to nnn. Fly in a wind-free environment to ensure flight safety,E118,E118
+618,Payload mode enabled. Return the aircraft to an area nearby the home point promptly to ensure flight safety,E127,E127
+619,Precision Landing,E38,E38
+620,Precision Landing. Correcting Landing Position.,E38,E38
+621,Precision Landing. Locating Landing Point,E38,E38
+622,Precision Landing. Rectifying aircraft position.,E38,E38
+623,Propeller Fell Off,E154,E154
+624,Propeller Fell Off,E154,E154
+625,Propeller Fell Off. Motor idle. Check whether propellers are installed,E103,E103
+626,Propeller Guard Mounted Propeller Guard mounted. Forward Obstacle Sensing will be automatically switched off,E220,E220
+627,Propeller Guard Mounted Propeller Guard mounted. Forward Obstacle Sensing will be automatically switched off,E220,E220
+628,Propeller guard or extra payload detected. Flight performance will be affected. Fly with caution,E128,E128
+629,Propeller rotating too fast. Wind resistance affected. Return to home and land promptly. Check whether propeller on beeping ESC is warped or damaged,E144,E144
+630,Propeller rotating too fast. Wind resistance affected. Return to home and land promptly. Check whether propeller on beeping ESC is warped or damaged,E144,E144
+631,Propellers not installed,E194,E194
+632,Propellers not installed,E194,E194
+633,Propulsion output has been limited to ensure battery health.,E56,E56
+634,QuickShot has ended,E109,E109
+635,RTH : Ascending to RTH altitude.,E335,E335
+636,RTH : Cruise.,E250,E250
+637,RTH : Cruise.,E250,E250
+638,RTH : Heading alignment.,E137,E137
+639,RTH : Heading alignment.,E137,E137
+640,RTH : Preascending.,E121,E121
+641,RTH : Preascending.,E121,E121
+642,RTH Altitude : 65FT.,E105,E105
+643,RTH Altitude : 98FT.,E105,E105
+644,RTH Altitude : 98FT. Data Recorder File Index is 1.,E191,E191
+645,RTH Altitude : 98FT. Data Recorder File Index is 1.,E191,E191
+646,RTH altitude adjusted to nnn,E24,E24
+647,RTK Base Station Data Not Received,E235,E235
+648,RTK Base Station Data Not Received. Please make sure base station antenna is connected to the correct port,E235,E235
+649,RTK signal weak. Move to an open area for takeoff or turn off RTK,E100,E100
+650,RTK signal weak. Move to an open area for takeoff or turn off RTK,E100,E100
+651,Reaching maximum altitude...,E30,E30
+652,Recenter Gimbal Pan,E89,E89
+653,Recharge promptly,E98,E98
+654,Recharge promptly,E98,E98
+655,Rectifying aircraft position,E145,E145
+656,Rectifying aircraft position,E145,E145
+657,Remote Controller Right Dial Locked. Lightly press it to adjust.,E86,E86
+658,Remote ID error. Connect to network to obtain mobile device location. Flying without broadcasting required remote ID messages may violate local regulations,E78,E78
+659,Remote ID error. Connect to network to obtain mobile device location. Flying without broadcasting required remote ID messages may violate local regulations,E78,E78
+660,Remote ID functionality normal,E188,E188
+661,Remote ID functionality normal,E188,E188
+662,Remote controller assisted takeoff initiated.,E241,E241
+663,Remote controller assisted takeoff initiated.,E241,E241
+664,Remote controller battery level low. Recharge promptly,E283,E283
+665,Remote controller battery level low. Recharge promptly,E283,E283
+666,Remote controller disconnected from aircraft,E252,E252
+667,Remote controller disconnected from aircraft,E252,E252
+668,Remote controller in high interference environment. Manually adjust flight route or return to home,E43,E43
+669,Remote controller signal lost,E17,E17
+670,Remote controller signal lost,E17,E17
+671,Remote controller signal weak. Adjust remote controller antennas,E289,E289
+672,Remote controller signal weak. Adjust remote controller antennas,E289,E289
+673,Restart aircraft,E115,E115
+674,Restart aircraft and DJI Fly,E115,E115
+675,Return-to-Home Altitude : 65FT,E129,E129
+676,Return-to-Home Altitude : 98FT,E129,E129
+677,Return-to-Home Altitude : 98FT.,E129,E129
+678,Returning to the Home Point,E195,E195
+679,Returning to the Home Point,E195,E195
+680,Right Dial Locked. Lightly press to adjust.,E86,E86
+681,Running Flight Simulator. Restart aircraft to take off,E115,E115
+682,SD card full. Change card or delete files,E97,E97
+683,SD card malfunction. Change card,E65,E65
+684,SD card malfunction. Change card,E65,E65
+685,SD card speed low. Change card,E318,E318
+686,SD card speed low. Change card,E318,E318
+687,SD card write speed is too slow. Not suitable for shooting a 4K video.,E237,E237
+688,SD card write speed is too slow. Not suitable for shooting a 4K video.,E237,E237
+689,Satellite positioning off. Fly with Caution.,E95,E95
+690,Satellite positioning off. Fly with Caution.,E95,E95
+691,Sensing system is blocked or too close to the obstacle.,E239,E239
+692,Sensing system is blocked or too close to the obstacle.,E239,E239
+693,Set Flight Mode to GPS to fly safe,E146,E146
+694,Set Flight Mode to GPS to fly safe,E146,E146
+695,Setting new Maximum Flight Altitude to nnn,E30,E30
+696,Setting new Return-To-Home altitude to nnn,E293,E293
+697,Setting new Return-To-Home altitude to nnn,E293,E293
+698,Signal Lost. Aircraft returning to Home Point,E253,E253
+699,Signal Lost. Aircraft returning to Home Point,E253,E253
+700,"Sprayer turned OFF, sprayed nnn at nnn liters/min",E209,E209
+701,"Sprayer turned OFF, sprayed nnn at nnn liters/min",E209,E209
+702,Sprayer turned ON,E339,E339
+703,Sprayer turned ON,E339,E339
+704,Starting Smart Track,E71,E71
+705,Starting Smart Track,E71,E71
+706,Strong Aircraft Interference,E99,E99
+707,Strong Aircraft Interference,E99,E99
+708,Strong Interference Detected. Be careful when flying long distances.,E49,E49
+709,Strong Interference Now. Fly with caution.,E49,E49
+710,Strong Interference to Aircraft. Signal interruption may be more likely. Fly with caution.,E49,E49
+711,Strong Interference to Remote Controller. Signal interruption maybe more likely. Fly with caution,E114,E114
+712,Strong Interference. Fly with caution.,E49,E49
+713,Strong Remote Controller Interference,E114,E114
+714,Strong Remote Controller Interference.,E114,E114
+715,Strong wind warning. Aircraft unable to fly stably. Lower altitude immediately and manually return to home,E261,E261
+716,Strong wind warning. Aircraft unable to return to home automatically. Lower altitude immediately and return to home manually,E261,E261
+717,Strong wind. Fly with caution,E60,E60
+718,Strong wireless interference. Please fly with caution.,E66,E66
+719,Strong wireless interference. Please fly with caution. Obstacle Avoidance Disabled. Landing gear lowered. Obstacle Avoidance Disabled.,E66,E66
+720,Subject lost. Reselect subject,E19,E19
+721,Subject lost. Searching …,E19,E19
+722,Subject too Large. Move Away and retry,E292,E292
+723,Subject too Large. Move Away and retry,E292,E292
+724,Subject too Small. Get Closer and retry,E20,E20
+725,Switched to A (Attitude)-mode,E87,E87
+726,Switched to A (Attitude)-mode,E87,E87
+727,Switched to P (Positioning)-mode.,E5,E5
+728,Switched to P (Positioning)-mode.,E5,E5
+729,Switched to S (Sport)-mode.,E255,E255
+730,Switched to S (Sport)-mode.,E255,E255
+731,Switched to T (Tripod)-mode.,E72,E72
+732,Switched to T (Tripod)-mode.,E72,E72
+733,Switched to gimbal free mode. Use the RC to control aircraft yaw,E141,E141
+734,Switched to gimbal free mode. Use the RC to control aircraft yaw,E141,E141
+735,Take off and retry this function.,E270,E270
+736,Take off and retry this function.,E270,E270
+737,Take off in P-Mode,E277,E277
+738,Take off in P-Mode,E277,E277
+739,Taking Off.,E90,E90
+740,Taking Off.,E90,E90
+741,Tap Fly Flight Ended. Landing Gear Lowered,E102,E102
+742,Tap the screen lightly to focus.,E35,E35
+743,Tap the screen to focus.,E35,E35
+744,Tap to choose a valid zone.,E266,E266
+745,Tap to choose a valid zone.,E266,E266
+746,Target lost. QuickShots stopped,E109,E109
+747,The aircraft is flying back to the start point,E119,E119
+748,The flight attitude angle is larger in Sport mode. The gimbal will rotate when the aircraft starts or stops. Use Normal mode if required for stable shooting,E171,E171
+749,The flight attitude angle is larger in Sport mode. The gimbal will rotate when the aircraft starts or stops. Use Normal mode if required for stable shooting,E171,E171
+750,The remaining battery is only enough for RTH. Return home now.,E74,E74
+751,"Tip: Aircraft reached maximum distance, please pay attention to flight safety",E295,E295
+752,"Tip: Aircraft reached maximum distance, please pay attention to flight safety",E295,E295
+753,Tip: Only the first camera can tap-zoom in dual gimbal control mode,E85,E85
+754,Tip: Only the first camera can tap-zoom in dual gimbal control mode,E85,E85
+755,"Tip: When multi-gimbals are controlled together, only the first gimbal spotlight feature is available",E110,E110
+756,"Tip: When multi-gimbals are controlled together, only the first gimbal spotlight feature is available",E110,E110
+757,"To take off in non-P mode, toggle Flight Mode Switch to another mode and then toggle it back.",E227,E227
+758,"To take off in non-P mode, toggle Flight Mode Switch to another mode and then toggle it back.",E227,E227
+759,Unable to take off,E331,E331
+760,Unable to take off,E331,E331
+761,Unable to take off in low light environment. Ensure there are no metal and magnetic objects near the aircraft and calibrate compass,E181,E181
+762,Unable to take off in low light environment. Ensure there are no metal and magnetic objects near the aircraft and calibrate compass,E181,E181
+763,"Unknown Error, Cannot Takeoff. Contact DJI support",E33,E33
+764,"Unknown Error, Cannot Takeoff. Contact DJI support",E33,E33
+765,Upward Obstacle Detected,E152,E152
+766,Upward Obstacle Detected,E152,E152
+767,Video cache has stopped because there is not enough storage space. You can enable Auto Cache Clear or manually delete cache to get enough space,E160,E160
+768,Video cache has stopped because there is not enough storage space. You can enable Auto Cache Clear or manually delete cache to get enough space,E160,E160
+769,Vision sensor error. Contact DJI Support for assistance,E124,E124
+770,Vision sensor(s) blocked. Fly with caution,E123,E123
+771,Vision sensor(s) blocked. Fly with caution,E123,E123
+772,Vision systems and obstacle avoidance disabled,E183,E183
+773,Vision systems and obstacle avoidance disabled,E183,E183
+774,Visual positioning inaccurate. Fly with caution,E267,E267
+775,Visual positioning inaccurate. Fly with caution,E267,E267
+776,Warning,E140,E140
+777,Warning,E140,E140
+778,Warning. The remaining battery is only enough for RTH. Return home now.,E74,E74
+779,Warning: Aircraft is less than nnn (minimum) away from the object below,E317,E317
+780,Warning: Aircraft is less than nnn (minimum) away from the object below,E317,E317
+781,Warning: Battery Temperature Below 15°C (59F). Warm battery to above 25°C (77F) before flying,E26,E26
+782,Warning: Command Failed,E46,E46
+783,Warning: Command Timeout,E147,E147
+784,Warning: Critically low battery. Please change the battery,E282,E282
+785,Warning: Max Flight Altitude Reached. Adjust in Main Controller Settings if necessary,E4,E4
+786,Warning: Motor Obstructed,E122,E122
+787,Warning: Motor Obstructed,E122,E122
+788,Warning: Motor Overloaded. Aircraft will decelerate to ensure safety,E101,E101
+789,Warning: Motor Overloaded. Aircraft will decelerate to ensure safety,E101,E101
+790,Waypoint Mission Paused,E273,E273
+791,Waypoint Mission Paused,E273,E273
+792,Waypoint Mission Resumed,E274,E274
+793,Waypoint Mission Resumed,E274,E274
+794,Waypoint Mission Start,E2,E2
+795,Weak GPS signal. Aircraft is in Attitude mode and hovering may be unstable. Fly with caution.,E11,E11
+796,Weak GPS signal. Positioning accuracy may be compromised. Please fly with caution,E11,E11
+797,Weak image transmission signal. Adjust antennas,E94,E94
+798,Weak signal. Adjust antenna and avoid signal block.,E94,E94
+799,Weak signal. Adjust antennas,E94,E94
+800,Weak signal. Avoid blocking the antennas and keep the antennas parallel to and facing toward the aircraft during flight.,E229,E229
+801,Weak signal. Avoid blocking the antennas and keep the antennas parallel to and facing toward the aircraft during flight. Downlink Lost.,E229,E229
+802,Weak signal. Make sure the remote controller is facing aircraft and avoid blocking the signal,E229,E229
+803,Yaw Error.,E151,E151
+804,Yaw Error.,E151,E151
+805,Your aircraft has entered a Warning Zone (Class D). Please fly with caution.,E286,E286
+806,Your aircraft has entered a Warning Zone (Class D). Please fly with caution.,E286,E286
+807,Your aircraft is at the boundary of an Altitude Zone. Please fly away or land with caution,E287,E287
+808,Your aircraft is at the boundary of an Altitude Zone. Please fly away or land with caution,E287,E287
+809,Your aircraft is at the boundary of an Authorization Zone. Please fly away with caution,E288,E288
+810,Your aircraft is at the boundary of an Authorization Zone. Please fly away with caution,E288,E288
+811,Your aircraft is flying in an Altitude Zone (nnn). Please fly with caution,E16,E16
+812,Your aircraft is flying in an Altitude Zone (nnn). Please fly with caution,E16,E16
+813,Your palm is too close to the aircraft. Please step farther away.,E126,E126
+814,Your palm is too close to the aircraft. Please step farther away.,E126,E126
+815,Your palm is too far away from the aircraft. Please step closer.,E336,E336
+816,Your palm is too far away from the aircraft. Please step closer.,E336,E336
