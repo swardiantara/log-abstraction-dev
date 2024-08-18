@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "HPC",
+    "embedding": "drone-sbert",
+    "threshold": 0.26,
+    "save_model": false,
+    "started_at": "2024-08-18 07:09:44.252888",
+    "ended_at": "2024-08-18 07:09:44.379430",
+    "duration": "126.542 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.5555",
+        "singleton_f1": "0.66667",
+        "ami_score": "0.97776",
+        "nmi_score": "0.97936",
+        "ari_score": "0.98273",
+        "hgi_score": "0.96656",
+        "cpi_score": "0.9925",
+        "vmi_score": "0.97936",
+        "fmi_score": "0.98451",
+        "silhouette_avg": "0.91056",
+        "calinski_harabasz_avg": "3132.90717"
+    }
+}

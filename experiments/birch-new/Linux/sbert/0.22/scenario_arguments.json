@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Linux",
+    "embedding": "sbert",
+    "threshold": 0.22,
+    "save_model": false,
+    "started_at": "2024-08-18 07:16:46.056063",
+    "ended_at": "2024-08-18 07:16:46.213119",
+    "duration": "157.056 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.177",
+        "singleton_f1": "0.98396",
+        "ami_score": "0.6501",
+        "nmi_score": "0.70203",
+        "ari_score": "0.24829",
+        "hgi_score": "0.94581",
+        "cpi_score": "0.55817",
+        "vmi_score": "0.70203",
+        "fmi_score": "0.40788",
+        "silhouette_avg": "0.62379",
+        "calinski_harabasz_avg": "379.73853"
+    }
+}
