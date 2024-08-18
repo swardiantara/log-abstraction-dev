@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "HealthApp",
+    "embedding": "sbert",
+    "threshold": 0.19,
+    "save_model": false,
+    "started_at": "2024-08-18 07:07:16.091540",
+    "ended_at": "2024-08-18 07:07:16.228170",
+    "duration": "136.63 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.4085",
+        "singleton_f1": "0.92063",
+        "ami_score": "0.91356",
+        "nmi_score": "0.9231",
+        "ari_score": "0.83523",
+        "hgi_score": "0.99722",
+        "cpi_score": "0.85923",
+        "vmi_score": "0.9231",
+        "fmi_score": "0.85937",
+        "silhouette_avg": "0.69601",
+        "calinski_harabasz_avg": "1375.5634"
+    }
+}
