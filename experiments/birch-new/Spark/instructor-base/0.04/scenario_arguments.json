@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Spark",
+    "embedding": "instructor-base",
+    "threshold": 0.04,
+    "save_model": false,
+    "started_at": "2024-08-18 18:40:48.296030",
+    "ended_at": "2024-08-18 18:40:48.471096",
+    "duration": "175.066 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.0575",
+        "singleton_f1": "0.03509",
+        "ami_score": "0.20733",
+        "nmi_score": "0.50797",
+        "ari_score": "0.02771",
+        "hgi_score": "1.0",
+        "cpi_score": "0.34045",
+        "vmi_score": "0.50797",
+        "fmi_score": "0.12672",
+        "silhouette_avg": "0.22869",
+        "calinski_harabasz_avg": "177.94942"
+    }
+}

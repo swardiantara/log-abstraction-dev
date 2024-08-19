@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "OpenStack",
+    "embedding": "instructor-xl",
+    "threshold": 0.19,
+    "save_model": false,
+    "started_at": "2024-08-18 18:15:18.354186",
+    "ended_at": "2024-08-18 18:15:18.470782",
+    "duration": "116.596 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.401",
+        "singleton_f1": "0.8",
+        "ami_score": "0.86463",
+        "nmi_score": "0.88219",
+        "ari_score": "0.65763",
+        "hgi_score": "0.93194",
+        "cpi_score": "0.83749",
+        "vmi_score": "0.88219",
+        "fmi_score": "0.73207",
+        "silhouette_avg": "0.78589",
+        "calinski_harabasz_avg": "656.03868"
+    }
+}

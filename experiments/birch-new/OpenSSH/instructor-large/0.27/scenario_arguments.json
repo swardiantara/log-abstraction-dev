@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "OpenSSH",
+    "embedding": "instructor-large",
+    "threshold": 0.27,
+    "save_model": false,
+    "started_at": "2024-08-18 17:46:07.934030",
+    "ended_at": "2024-08-18 17:46:08.046422",
+    "duration": "112.392 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.0995",
+        "singleton_f1": "0.28571",
+        "ami_score": "0.72253",
+        "nmi_score": "0.72751",
+        "ari_score": "0.39031",
+        "hgi_score": "0.57201",
+        "cpi_score": "0.99913",
+        "vmi_score": "0.72751",
+        "fmi_score": "0.58839",
+        "silhouette_avg": "0.53415",
+        "calinski_harabasz_avg": "541.34125"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "BGL",
+    "embedding": "instructor-base",
+    "threshold": 0.16,
+    "save_model": false,
+    "started_at": "2024-08-18 15:44:39.643601",
+    "ended_at": "2024-08-18 15:44:39.781900",
+    "duration": "138.299 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.398",
+        "singleton_f1": "0.57831",
+        "ami_score": "0.7955",
+        "nmi_score": "0.84037",
+        "ari_score": "0.35753",
+        "hgi_score": "0.98363",
+        "cpi_score": "0.73354",
+        "vmi_score": "0.84037",
+        "fmi_score": "0.49663",
+        "silhouette_avg": "0.40831",
+        "calinski_harabasz_avg": "106.33611"
+    }
+}

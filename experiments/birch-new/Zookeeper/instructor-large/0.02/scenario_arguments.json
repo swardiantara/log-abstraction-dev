@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Zookeeper",
+    "embedding": "instructor-large",
+    "threshold": 0.02,
+    "save_model": false,
+    "started_at": "2024-08-18 19:32:25.806783",
+    "ended_at": "2024-08-18 19:32:25.961708",
+    "duration": "154.925 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.463",
+        "singleton_f1": "0.08297",
+        "ami_score": "0.68185",
+        "nmi_score": "0.76445",
+        "ari_score": "0.74787",
+        "hgi_score": "1.0",
+        "cpi_score": "0.61872",
+        "vmi_score": "0.76445",
+        "fmi_score": "0.79034",
+        "silhouette_avg": "0.68469",
+        "calinski_harabasz_avg": "10371.87169"
+    }
+}

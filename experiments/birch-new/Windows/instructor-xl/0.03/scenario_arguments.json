@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Windows",
+    "embedding": "instructor-xl",
+    "threshold": 0.03,
+    "save_model": false,
+    "started_at": "2024-08-18 19:19:44.533186",
+    "ended_at": "2024-08-18 19:19:44.669970",
+    "duration": "136.784 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.4",
+        "singleton_f1": "0.58824",
+        "ami_score": "0.77683",
+        "nmi_score": "0.79495",
+        "ari_score": "0.58158",
+        "hgi_score": "1.0",
+        "cpi_score": "0.65968",
+        "vmi_score": "0.79495",
+        "fmi_score": "0.68519",
+        "silhouette_avg": "0.61888",
+        "calinski_harabasz_avg": "15207.90775"
+    }
+}

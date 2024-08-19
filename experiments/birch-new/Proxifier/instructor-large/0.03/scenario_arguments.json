@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "Proxifier",
+    "embedding": "instructor-large",
+    "threshold": 0.03,
+    "save_model": false,
+    "started_at": "2024-08-18 18:23:50.808125",
+    "ended_at": "2024-08-18 18:23:50.971741",
+    "duration": "163.616 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.001",
+        "singleton_f1": "0",
+        "ami_score": "0.22003",
+        "nmi_score": "0.3101",
+        "ari_score": "0.13343",
+        "hgi_score": "1.0",
+        "cpi_score": "0.1835",
+        "vmi_score": "0.3101",
+        "fmi_score": "0.35099",
+        "silhouette_avg": "0.5897",
+        "calinski_harabasz_avg": "933.93057"
+    }
+}

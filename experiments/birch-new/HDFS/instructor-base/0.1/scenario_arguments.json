@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "HDFS",
+    "embedding": "instructor-base",
+    "threshold": 0.1,
+    "save_model": false,
+    "started_at": "2024-08-18 16:16:23.209610",
+    "ended_at": "2024-08-18 16:16:23.322897",
+    "duration": "113.287 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.685",
+        "singleton_f1": "0.8",
+        "ami_score": "0.97399",
+        "nmi_score": "0.97442",
+        "ari_score": "0.94557",
+        "hgi_score": "0.99722",
+        "cpi_score": "0.95264",
+        "vmi_score": "0.97442",
+        "fmi_score": "0.95317",
+        "silhouette_avg": "0.65321",
+        "calinski_harabasz_avg": "2481.81683"
+    }
+}

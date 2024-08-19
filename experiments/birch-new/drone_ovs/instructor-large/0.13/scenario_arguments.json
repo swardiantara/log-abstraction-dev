@@ -1,0 +1,23 @@
+{
+    "output_dir": "birch-new",
+    "dataset": "drone_ovs",
+    "embedding": "instructor-large",
+    "threshold": 0.13,
+    "save_model": false,
+    "started_at": "2024-08-18 15:19:12.967660",
+    "ended_at": "2024-08-18 15:19:13.111883",
+    "duration": "144.223 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.65319",
+        "singleton_f1": "0",
+        "ami_score": "0.76785",
+        "nmi_score": "0.96766",
+        "ari_score": "0.64065",
+        "hgi_score": "0.99687",
+        "cpi_score": "0.94011",
+        "vmi_score": "0.96766",
+        "fmi_score": "0.68084",
+        "silhouette_avg": "0.66183",
+        "calinski_harabasz_avg": "58.02812"
+    }
+}
