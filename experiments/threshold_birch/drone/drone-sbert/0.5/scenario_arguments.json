@@ -1,0 +1,23 @@
+{
+    "output_dir": "threshold_birch",
+    "dataset": "drone",
+    "embedding": "drone-sbert",
+    "threshold": 0.5,
+    "save_model": false,
+    "started_at": "2024-08-20 16:48:35.893720",
+    "ended_at": "2024-08-20 16:48:36.028817",
+    "duration": "135.097 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.68836",
+        "singleton_f1": "0.91781",
+        "ami_score": "0.8996",
+        "nmi_score": "0.98336",
+        "ari_score": "0.82985",
+        "hgi_score": "0.9698",
+        "cpi_score": "0.99729",
+        "vmi_score": "0.98336",
+        "fmi_score": "0.84099",
+        "silhouette_avg": "0.47033",
+        "calinski_harabasz_avg": "13.57861"
+    }
+}
