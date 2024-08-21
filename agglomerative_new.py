@@ -59,15 +59,15 @@ def main():
         os.makedirs(workdir)
 
     corpus_embeddings = get_features(dataset, args.embedding)
+    distance_matrix = compute_distance_matrix(corpus_embeddings)
     
-    clustering_model = Birch(threshold=args.threshold, n_clusters=None)
     clustering_model = AgglomerativeClustering(n_clusters=None,
                                     metric='precomputed',
                                     linkage='average',
                                     distance_threshold=args.threshold)
     
     started_at = datetime.datetime.now()
-    clustering_model.fit(corpus_embeddings)
+    clustering_model.fit(distance_matrix)
     ended_at = datetime.datetime.now()
 
     if args.save_model:
