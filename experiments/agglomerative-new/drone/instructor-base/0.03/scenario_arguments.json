@@ -1,0 +1,23 @@
+{
+    "output_dir": "agglomerative-new",
+    "dataset": "drone",
+    "embedding": "instructor-base",
+    "threshold": 0.03,
+    "save_model": false,
+    "started_at": "2024-08-22 03:26:20.354039",
+    "ended_at": "2024-08-22 03:26:20.362433",
+    "duration": "8.394 miliseconds",
+    "eval_score": {
+        "group_accuracy": "0.5274",
+        "singleton_f1": "0.75214",
+        "ami_score": "0.62334",
+        "nmi_score": "0.95896",
+        "ari_score": "0.54171",
+        "hgi_score": "0.99538",
+        "cpi_score": "0.92512",
+        "vmi_score": "0.95896",
+        "fmi_score": "0.60266",
+        "silhouette_avg": "0.16862",
+        "calinski_harabasz_avg": "14.18187"
+    }
+}
