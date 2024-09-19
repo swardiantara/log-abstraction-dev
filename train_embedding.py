@@ -64,7 +64,7 @@ train_loss = losses.ContrastiveLoss(model=model)
 evaluator = EmbeddingSimilarityEvaluator.from_input_examples(examples, name='drone-bert-absa')
 
 # Step 5: Train the model
-num_epochs = 2
+num_epochs = 1
 warmup_steps = int(len(train_dataloader) * num_epochs * 0.1)
 output_path = os.path.join('embeddings', 'drone-bert-absa')
 model.fit(
@@ -74,7 +74,8 @@ model.fit(
     warmup_steps=warmup_steps,
     output_path=output_path
 )
-bert_model = model[0]
-bert_model._save_to_state_dict(output_path, 'drone-bert-absa')
+
+bert_model = next(model.modules)
+bert_model.auto_model.save_pretrained(output_path, 'drone-bert-absa')
 # Save the model
 # model.save(output_path, 'drone-bert-absa')
