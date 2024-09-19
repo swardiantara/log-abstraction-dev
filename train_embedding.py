@@ -11,17 +11,17 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')
 
 # Step 1: Load a pre-trained model
-model_name = 'bert-base-cased'  # or 'hkunlp/instructor-xl'
-model = SentenceTransformer(model_name).to(device)
+# model_name = 'bert-base-cased'  # or 'hkunlp/instructor-xl'
+# model = SentenceTransformer(model_name).to(device)
 # model = models.Transformer(model_name)
 
 # Load pre-trained BERT model and tokenizer
-# model_name = 'bert-base-cased'  # You can also try 'bert-large-uncased' if you want a larger model
-# word_embedding_model = models.Transformer(model_name)
-# pooling_model = models.Pooling(word_embedding_dimension=word_embedding_model.get_word_embedding_dimension(), pooling_mode='cls')
+model_name = 'bert-base-cased'  # You can also try 'bert-large-uncased' if you want a larger model
+word_embedding_model = models.Transformer(model_name)
+pooling_model = models.Pooling(word_embedding_dimension=word_embedding_model.get_word_embedding_dimension(), pooling_mode='cls')
 
 # # Create a SentenceTransformer model using BERT and a pooling layer
-# model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
+model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 # Step 2: Prepare the dataset
 class DroneLogsDataset(Dataset):
@@ -64,7 +64,7 @@ train_loss = losses.ContrastiveLoss(model=model)
 evaluator = EmbeddingSimilarityEvaluator.from_input_examples(examples, name='drone-bert-absa')
 
 # Step 5: Train the model
-num_epochs = 5
+num_epochs = 2
 warmup_steps = int(len(train_dataloader) * num_epochs * 0.1)
 output_path = os.path.join('embeddings', 'drone-bert-absa')
 model.fit(
@@ -74,6 +74,7 @@ model.fit(
     warmup_steps=warmup_steps,
     output_path=output_path
 )
-# bert_model = model[0]
+bert_model = model[0]
+bert_model._save_to_state_dict(output_path, 'drone-bert-absa')
 # Save the model
-model.save(output_path, 'drone-bert-absa')
+# model.save(output_path, 'drone-bert-absa')
