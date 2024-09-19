@@ -11,8 +11,17 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')
 
 # Step 1: Load a pre-trained model
-model_name = 'all-mpnet-base-v2'  # or 'hkunlp/instructor-xl'
+model_name = 'bert-base-cased'  # or 'hkunlp/instructor-xl'
 model = SentenceTransformer(model_name).to(device)
+# model = models.Transformer(model_name)
+
+# Load pre-trained BERT model and tokenizer
+# model_name = 'bert-base-cased'  # You can also try 'bert-large-uncased' if you want a larger model
+# word_embedding_model = models.Transformer(model_name)
+# pooling_model = models.Pooling(word_embedding_dimension=word_embedding_model.get_word_embedding_dimension(), pooling_mode='cls')
+
+# # Create a SentenceTransformer model using BERT and a pooling layer
+# model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 # Step 2: Prepare the dataset
 class DroneLogsDataset(Dataset):
@@ -27,14 +36,14 @@ class DroneLogsDataset(Dataset):
         return InputExample(texts=[row['message']], label=row['cluster_id'])
 
 # Load your dataset
-df = pd.read_excel(os.path.join('dataset', 'cluster_label.xlsx'))  # Assume the CSV has 'message' and 'cluster_id' columns
+df = pd.read_excel(os.path.join('dataset', 'Drone_584.xlsx'))  # Assume the CSV has 'message' and 'cluster_id' columns
 
 # Create pairs for contrastive learning
 def create_pairs(df):
     examples = []
-    for cluster_id in df['cluster_id'].unique():
-        cluster_df = df[df['cluster_id'] == cluster_id]
-        other_df = df[df['cluster_id'] != cluster_id]
+    for label in df['cluster_id'].unique():
+        cluster_df = df[df['cluster_id'] == label]
+        other_df = df[df['cluster_id'] != label]
         for i, row in cluster_df.iterrows():
             for j, other_row in cluster_df.iterrows():
                 if i != j:
@@ -44,20 +53,20 @@ def create_pairs(df):
     return examples
 
 examples = create_pairs(df)
-
 # Step 3: Create DataLoader
 train_dataloader = DataLoader(examples, shuffle=True, batch_size=64)
+# print(train_dataloader)
 
 # Step 4: Define the contrastive loss
 train_loss = losses.ContrastiveLoss(model=model)
 
 # Optional: Define evaluator for validation
-evaluator = EmbeddingSimilarityEvaluator.from_input_examples(examples, name='drone-log-eval')
+evaluator = EmbeddingSimilarityEvaluator.from_input_examples(examples, name='drone-bert-absa')
 
 # Step 5: Train the model
-num_epochs = 4
+num_epochs = 5
 warmup_steps = int(len(train_dataloader) * num_epochs * 0.1)
-output_path = os.path.join('experiments', 'embeddings')
+output_path = os.path.join('embeddings', 'drone-bert-absa')
 model.fit(
     train_objectives=[(train_dataloader, train_loss)],
     evaluator=evaluator,
@@ -65,6 +74,6 @@ model.fit(
     warmup_steps=warmup_steps,
     output_path=output_path
 )
-
+# bert_model = model[0]
 # Save the model
-model.save(output_path, 'drone_log_semantic')
+model.save(output_path, 'drone-bert-absa')
